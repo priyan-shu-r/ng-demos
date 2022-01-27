@@ -1,0 +1,6 @@
+<h1> {{title}} </h1>
+<input type="text" placeholder="write something" #task>
+<button (click) = "addTask(task.value)">Add Task</button>
+<ul>
+  <li *ngFor="let item of list; let i=index" (click)=rmTask(i) >{{item}}</li>
+</ul>

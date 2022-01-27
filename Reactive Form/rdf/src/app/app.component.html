@@ -1,0 +1,44 @@
+<div>
+<h1 style="text-align: center;">{{title}}</h1>
+
+<form [formGroup]= "reactiveForm" (ngSubmit)= "onSubmit()">
+  <div class="form-group">
+    <label>User Name</label>
+    <input   type="text" formControlName="userName" class="form-control">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" formControlName="password1" class="form-control">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="confirm password" formControlName="password2" class="form-control">
+  </div>
+  <br>
+  
+
+<div formGroupName="address">
+  
+  <div class="form-group">
+    <label>City</label>
+    <input type="text" formControlName='city' class="form-control">
+  </div>
+  <div class="form-group">
+    <label>State</label>
+    <input type="text" formControlName='state' class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Postal</label>
+    <input type="text" formControlName='postal' class="form-control">
+  </div>
+
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+<button (click)="loadApiData()"type="button" class="btn btn-secondary ml-2">Load API Data</button>
+</form>
+
+{{reactiveForm.value | json}}
+</div>
