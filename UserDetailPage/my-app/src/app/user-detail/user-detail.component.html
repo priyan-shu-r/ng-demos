@@ -1,0 +1,30 @@
+<h1 style="text-align: center;">User Details Form</h1>
+<div class="design">
+<div class="d-flex justify-content-center">
+<form #userForm="ngForm">
+    <div class="mb-3">
+      <label for="text" class="form-label">Name:</label>
+      <input type="name" #name="ngModel" pattern="^[a-zA-Z0-9]*$" required class="form-control" id="name" name="username" placeholder="Enter Name" ngModel>
+      <small class="text-danger" *ngIf="name.invalid && name.touched">Name is Required</small>
+      </div>
+    
+    <div class="mb-3">
+        <label for="text" class="form-label">Email:</label>
+        <input type="email" #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required class="form-control" id="email" name="useremail" placeholder="Enter Email" ngModel>
+        <small class="text-danger" *ngIf="email.invalid && email.touched">Enter a valid Email</small>
+      </div>
+    <div class="mb-3">
+      <label for="text" class="form-label">Password:</label>
+      <input type="password" #password="ngModel" pattern="^(?!.*[\s])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required class="form-control" id="password" name="userpassword" placeholder="Enter Password" ngModel>
+      <small class="text-danger" *ngIf="password.invalid && password.touched">password must contain 8 digit of length</small>
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Phone:</label>
+        <input type="phone" #phone="ngModel" pattern="^\d{10}$" required class="form-control" id="phone" name="userphone" placeholder="Enter Phone" ngModel>
+        <small class="text-danger" *ngIf="phone.invalid && phone.touched">Phone should be number only and must be 10 digits</small>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
