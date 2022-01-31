@@ -1,0 +1,47 @@
+<h1 style="text-align: center;">{{title}}</h1>
+  <div class="d-flex justify-content-center">
+  <div class="design">
+  <div class="container-fluid">
+
+  <form [formGroup]= "reactiveForm">
+    <div class="form-group">
+      <label>Name</label>
+      <input formControlName="name" type="text"  class="form-control">
+    <small class="text-danger" *ngIf="name.invalid && name.touched">Name is Required</small>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Email</label>
+      <input formControlName="email" type="text"  class="form-control">
+      <small class="text-danger" *ngIf="email.invalid && email.touched">Email is Required</small>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Password</label>
+      <input formControlName="password" type="text"  class="form-control">
+      <small class="text-danger" *ngIf="password.invalid && password.touched">Password must contains atleast 8 digit including uppercase and lowecase</small>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Phone</label>
+      <input formControlName="phone" type="text"  class="form-control">
+      <small class="text-danger" *ngIf="phone.invalid && phone.touched">Phone must contains 10 numbers</small>
+    </div>
+    <br>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+  
+ </form>
+
+
+</div>
+</div>
+
+
+
+ </div>
+
+ {{reactiveForm.value | json}}
+
+ 
+  
+
