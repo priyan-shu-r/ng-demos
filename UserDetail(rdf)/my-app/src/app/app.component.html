@@ -3,7 +3,7 @@
   <div class="design">
   <div class="container-fluid">
 
-  <form [formGroup]= "reactiveForm">
+  <form [formGroup]= "reactiveForm" (ngSubmit)="onSubmit" novalidate>
     <div class="form-group">
       <label>Name</label>
       <input formControlName="name" type="text"  class="form-control">
@@ -28,7 +28,7 @@
       <small class="text-danger" *ngIf="phone.invalid && phone.touched">Phone must contains 10 numbers</small>
     </div>
     <br>
-  <button type="submit" class="btn btn-secondary">Submit</button>
+  <button type="text" class="btn btn-secondary">Submit</button>
   
  </form>
 
