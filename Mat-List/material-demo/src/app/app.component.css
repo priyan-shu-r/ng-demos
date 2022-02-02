@@ -1,3 +1,24 @@
 table {
-    width: 100%;
+    width: 50%;
+    margin: 40px 50px 75px 450px;
+    background-color: lightcyan;
+  }
+
+  .design{
+    margin: 10px 1175px;
+  }
+
+  .heading{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+
+  .header{
+    font-weight: bold;
+    background-color: lightgray;
+  }
+
+  .page{
+    margin: 2px 500px;
   }

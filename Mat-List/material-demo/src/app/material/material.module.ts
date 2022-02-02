@@ -1,22 +1,13 @@
 import { NgModule } from '@angular/core';
-import { MatSliderModule } from '@angular/material/slider';
+//for implementing data table 
 import { MatTableModule} from '@angular/material/table'
 import { MatSortModule } from '@angular/material/sort';
-// import { MatTableDataSource } from '@angular/material/table';
-
-// import { MatInputModule } from '.angular/material/input';
-// import { FormsModule } from '.angular/forms';
+import { MatPaginatorModule} from '@angular/material/paginator';
 
 const MaterialComponent = [
-  MatSliderModule,
   MatTableModule,
-  MatSortModule
-  // MatTableDataSource,
-  // MatInputModule,
-  // FormsModule
-  
-  
-
+  MatSortModule,
+  MatPaginatorModule
 ];
 
 @NgModule({

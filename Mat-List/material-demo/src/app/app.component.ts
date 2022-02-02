@@ -1,8 +1,11 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import {MatSort, Sort} from '@angular/material/sort';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table'; // for filtering
+import { MatSort, Sort} from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 export interface PeriodicElement {
+  // interface used to define type of each element
   name: string;
   position: number;
   weight: number;
@@ -27,16 +30,27 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+export class AppComponent implements AfterViewInit {
 
-  @ViewChild(MatSort)
-  sort: MatSort;
-
-  ngOnInit() {
+  ngAfterViewInit(): void {
+    // throw new Error('Method not implemented.');
+    this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+    this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource : any;  //dataSource is property which initialize elementdata
+
+  //sorting
+  @ViewChild(MatSort)sort!: MatSort;
+  //paginator
+  @ViewChild(MatPaginator)paginator!: MatPaginator;
+
+  constructor(private _liveAnnouncer: LiveAnnouncer) {}
+
+  // ngInit() {
+    
+  // }
   
   //display the row in the console when you click on any row data
   logData(row:any)
@@ -50,5 +64,13 @@ applyFilter(filterValue: string)
   this.dataSource.filter = filterValue.trim().toLowerCase();
 }
 
+//sorting
+ announceSortChange(sortState: Sort) {
+  if (sortState.direction) {
+    this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+  } else {
+    this._liveAnnouncer.announce('Sorting cleared');
+  }
+}
 
 }
