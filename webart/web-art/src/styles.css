@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files
+body{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.header{
+    background-color: #DCDCDC;
+    width: 80%;
+    height: 50px;
+    margin-left: 150px;
+    border: 15px solid aliceblue;
+}
+
+li{
+    display: inline-block;
+    padding: 20px;
+}
+
+
+.dashboard{
+    width: 25%;
+    height: 50%;
+    background-color: white;
+    padding: 20px;
+    margin-left: 150px;
+    border: 15px solid aliceblue;
+    text-align: center;
+}
+.btn1{
+   font-size: 21px;
+   background-color: #008CBA;
+   color: white;
+   border: none;
+   padding: 10px;
+}
+.btn2{
+    font-size: 21px;
+    color: #008CBA;
+    border: none;
+    padding: 10px;
+   
+ }
+
+ .contact{
+    width: 25%;
+    height: 50%;
+    background-color: white;
+    margin-left: 150px;
+    border: 15px solid aliceblue;
+ }
+
+ .para1{
+    margin-left: 10px;
+    text-align: center; 
+    padding: 5px;
+    display: inline;
+ }
+
+ .website{
+    width: 30px;
+    height: 30px;
+ }
+ .twitter{
+    width:30px;
+    height:30px;
+ }   
+
+ .instagram{
+    width: 30px;
+    height: 30px;
+ }
+ .github{
+    width: 30px;
+    height: 30px;
+ }
+ 
+  */
