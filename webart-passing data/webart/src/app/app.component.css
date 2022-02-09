@@ -1,0 +1,15 @@
+
+
+.header{
+    background-color: #E9ECEF;
+    width: 80%;
+    height: 50px;
+    margin-left: 150px;
+    border: 15px #E2E8F0;
+    border-radius: 15px;
+}
+
+li{
+    display: inline-block;
+    padding: 20px;
+}

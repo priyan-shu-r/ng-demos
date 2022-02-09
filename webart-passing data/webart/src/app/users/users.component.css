@@ -1,0 +1,35 @@
+
+.profile{
+    width: 25%;
+    height: 10%;
+    background-color: white;
+    padding: 20px;
+    margin-left: 150px;
+    border: 10px solid #E2E8F0;
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    border-radius: 21px;
+}
+
+.profile1{
+    height: 200px;
+}
+
+.btn1{
+    font-size: 21px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 8px;
+ }
+ .btn2{
+     font-size: 21px;
+     background-color: white;
+     color: #007BFF;
+     border-color: #007BFF;
+     padding: 10px;
+     border-radius: 10px;
+  }

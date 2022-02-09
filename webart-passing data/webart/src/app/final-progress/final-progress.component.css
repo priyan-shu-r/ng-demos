@@ -1,0 +1,63 @@
+
+.project2{
+    width: 425px; 
+    height: 345px; 
+    background-color: white;
+    border: 10px #E2E8F0;
+    position: relative;
+    left: 1176px;
+    bottom: 1160px;
+    padding: 20px;
+    border-radius: 21px;
+    transition: 0.3s;
+}
+
+.project2:hover{
+
+    transform: rotate(-5deg);
+    transition: 0.3s;
+}
+.container1{
+    background-color: #DCDCDC;
+    width: 80%;
+    height: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
+.progress1{
+    background-color: #007BFF;
+    /* width: 80%; */
+    height: 10px;
+    border-radius: 21px 0px 0px 21px;
+    position: inherit;
+}
+.progress2{
+    background-color: #007BFF;
+    /* width: 70%; */
+    height: 10px;
+    border-radius: 21px 0px 0px 21px;
+    position: inherit;
+}
+.progress3{
+    background-color: #007BFF;
+    /* width: 90%; */
+    height: 10px;
+    border-radius: 21px 0px 0px 21px;
+    position: inherit;
+}
+.progress4{
+    background-color: #007BFF;
+    /* width: 50%; */
+    height: 10px;
+    border-radius: 21px 0px 0px 21px;
+    position: inherit;
+}
+.progress5{
+    background-color: #007BFF;
+    /* width: 60%; */
+    height: 10px;
+    border-radius: 21px 0px 0px 21px;
+    position: inherit;
+}

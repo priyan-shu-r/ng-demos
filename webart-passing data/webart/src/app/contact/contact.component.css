@@ -1,0 +1,69 @@
+.contact{
+    width: 25.3%;
+    height: 260px;
+    background-color: white;
+    margin-left: 150px;
+    border: 15px #E2E8F0;
+    padding: 20px;
+    border-radius: 21px;
+    position: relative;
+    left: 5px;
+ }
+
+ .para{
+    margin-left: 10px;
+    text-align: center; 
+    padding: 5px;
+    display: inline;
+    position: relative;
+    bottom: 10px;
+ }
+
+ .website{
+    width: 30px;
+    height: 30px;
+ }
+ .twitter{
+    width:30px;
+    height:30px;
+ }   
+
+ .instagram{
+    width: 30px;
+    height: 30px;
+ }
+ .github{
+    width: 30px;
+    height: 30px;
+ }
+
+ #text-move1{
+    font-size: 20px;
+   position: relative;
+   left: 180px;
+   color: dimgray;
+}
+#text-move2{
+   font-size: 20px;
+  position: relative;
+  left: 275px;
+  color: dimgray;
+}
+#text-move3{
+   font-size: 20px;
+  position: relative;
+  left: 255px;
+  color: dimgray;
+}
+#text-move4{
+   font-size: 20px;
+  position: relative;
+  left: 245px;
+  color: dimgray;
+}
+#text-move5{
+  font-size: 20px;
+  position: relative;
+  left: 250px;
+  color: dimgray;
+}
