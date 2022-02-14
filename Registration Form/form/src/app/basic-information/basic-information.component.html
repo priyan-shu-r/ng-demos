@@ -1,45 +1,65 @@
+
 <div class="information">
     <span class="info"><b id="base">Basic Information</b></span>
     
-    <div class="basic">
-        <div class="row">
+    <div class="basic" [formGroup]="RegistrationForm">
+        <div class="row" >
         <label>Email <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+      
+        <input type="text" formControlName="email" class="form-control" title="abc@xyz.com">
+        <br>
+        <small class="error" *ngIf="email.touched">Email is Required</small>
+        <small class="error" *ngIf="email.errors?.['pattern']">Invalid Email</small>
+        
         </div>
         <br>
         <div class="row">
         <label >Password <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="password" formControlName="password" class="form-control" title="contains uppercase, lowercase, number and special character">
+        <small class="error" *ngIf="password.errors?.['required'] && password.touched">Password is Required</small>
+        <small class="error" *ngIf="password.errors?.['pattern']">Invalid Password</small>
         </div>
         <br>
         <div class="row">
         <label >Retype Password <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="password" formControlName="repassword" class="form-control" title="contains uppercase, lowercase, number and special character">
+        <small class="error" *ngIf="repassword.errors?.['required'] && repassword.touched">Invalid Password</small>
+        <small class="error" *ngIf="repassword.value != password.value">write the same password</small>
         </div>
         <br>
         <div class="row">
         <label >First Name <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" formControlName="firstName" class="formControl" title="Name should not start or end with space ; Multiple spaces are not allowed">
+        <small class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">Name is Required</small>
+        <small class="error" *ngIf="firstName.errors?.['pattern']">Multi spaces is not be allowed</small>
         </div>
         <br>
         <div class="row">
         <label >Last Name <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" formControlName="lastName" class="form-control" title="Name should not start or end with space ; Multiple spaces are not allowed">
+        <small class="error" *ngIf="lastName.errors?.['required'] && lastName.touched">Last Name is Required</small>
+        <small class="error" *ngIf="lastName.errors?.['pattern']">Multi spaces should not be allowed</small>
         </div>
         <br>
         <div class="row">
         <label >Phone Number <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" placeholder="999-999-9999" formControlName="phone" class="form-control" title="phone number must be 10 digit">
+        <small class="error" *ngIf="phone.errors?.['required'] && phone.touched">Phone Number is Required</small>
+        <small class="error" *ngIf="phone.errors?.['pattern']">Phone Number must be 10 digits</small>
         </div>
         <br>
         <div class="row">
         <label >Address <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" formControlName="address" class="form-control">
+        <small class="error" *ngIf="address.errors?.['required'] && address.touched">Address is Required</small>
+        <small class="error" *ngIf="address.errors?.['pattern']">Address is Required</small>
         </div>
         <br>
         <div class="row">
         <label >City <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" formControlName="city" class="form-control">
+        <small style="color:red;" *ngIf="city.errors?.['required'] && city.touched">City Name is Required</small>
+        <small style="color:red;" *ngIf="city.errors?.['pattern']">Invalid City Name</small>
         </div>
         <br>
         <div class="row">
@@ -54,71 +74,107 @@
         <br>
         <div class="row">
         <label >Country <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <input type="text" formControlName="country" class="form-control">
+        <small style="color:red;" *ngIf="country.errors?.['required'] && country.touched">Country Name is Required</small>
+        <small style="color:red;" *ngIf="country.errors?.['pattern']">Invalid Country Name</small>
         </div>
         <br>
     </div>
 </div>
 
 
-<div class="information">
-    <span class="info"><b id="base">Basic Information</b></span>
+<div class="education">
+    <span class="info"><b id="base">Education</b></span>
     
-    <div class="basic">
+    <div class="basic" [formGroup]="RegistrationForm">
         <div class="row">
-        <label>Email <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <label>School <span style="display: inline-block; color: red;" >*</span></label>
+        <input type="text" formControlName="school" class="form-control">
+        <small class="error" *ngIf="school.errors?.['required'] && school.touched">School Name is Required</small>
+        <small class="error" *ngIf="school.errors?.['pattern']">School Name is Required</small>
         </div>
         <br>
         <div class="row">
-        <label >Password <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+        <label>Program <span style="display: inline-block; color: red;" >*</span></label>
+        <input type="text" formControlName="program" class="form-control">
+        <small class="error" *ngIf="program.errors?.['required'] && program.touched">Program is Required</small>
+        <small class="error" *ngIf="program.errors?.['pattern']">Invalid Program</small>
         </div>
         <br>
         <div class="row">
-        <label >Retype Password <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label >First Name <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label >Last Name <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label >Phone Number <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label >Address <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label >City <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
-        </div>
-        <br>
-        <div class="row">
-        <label>Province <span style="display: inline-block; color: red;" >*</span></label>
-        <select name="Province" id="Province">
-            
-            <option value="Alberta" selected>Alberta</option>
-            <option value="spain">spain</option>
+            <label>Education Level<span style="display: inline-block; color: red;" >*</span></label>
+            <select name="Education" id="Education" formControlName="education" class="form-control">
+                <option value="-selected-" selected>-select-</option>
+                <option value="" >Graduate</option>
+                <option value="">Post Graduate</option>
+            </select>
+            <small class="error" *ngIf="education.value">Select the valid education level</small>
+            </div>
+            <br>
+            <br>
+    
+          
+        <fieldset>
+            <legend>Education Status</legend>
+            <input type="radio" name="education-status" value="grad" id="grad" >
+            <label for="" class="grad">Graduated</label>
+            <input type="radio" name="education-status" value="cur-grad" id="grad">
+            <label for="" class="grad">Current Enrolled</label>
+            <input type="radio" name="education-status" value="not-grad" id="grad">
+            <label for="" class="grad">Did Not Graduate</label>
+        </fieldset>
         
-        </select>
-        </div>
-        <br>
         <div class="row">
-        <label >Country <span style="display: inline-block; color: red;" >*</span></label>
-        <input type="text">
+            <label>Graduation Date </label>
+            <input type="text">
         </div>
-        <br>
     </div>
+<!-- </div> -->
+
+<div class="experience">
+    <span class="info"><b id="base">Work Experience</b></span>
+        <div class="basic"[formGroup]="ExperienceForm">
+            <div class="row">
+                <label>Employeer: </label>
+                <input type="text" formControlName="employeer" class="form-control">
+            </div>
+            <br>
+            <div class="row">
+                <label >Job Title: </label>
+                <input type="text" formControlName="emptitle">
+            </div>
+                <br>
+                <br>
+            <div class="row">
+                <label class="duty">Job Duty </label>
+                <textarea name="" id="" cols="66" rows="6" formControlName="empduty"></textarea>
+            </div>
+                    <!-- <br> -->
+            <div class="row">
+                <label for="birthday">Worked Year</label>
+                <input type="number" value="number" formControlName="year">
+            </div>
+
+            <div class="attachments">
+                <span class="info"><b id="base">Attachments</b></span>
+                        
+            <div class="basic">
+                <div class="row">
+                <label>Attachments:</label>
+                <input type="file">
+                 </div>
+            </div>
+        </div>
 </div>
+</div>
+
+
+</div>
+
+<div>
+    <input type="button" class="btn1" value="Reset" (click)="resetForm()">
+    <input type="button" class="btn2" value="Apply" (click)="apply()">
+</div>
+
+
+<!-- {{reactiveForm.value | json}} -->
