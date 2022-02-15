@@ -1,0 +1,21 @@
+
+#filter1{
+    position: relative;
+    left: 350px;
+    top: 130px;
+}
+
+
+#filter2{
+    position: relative;
+    left: 650px;
+    top: 80px;
+}
+
+table{
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    left: 18%;
+    top: 20%;
+}
