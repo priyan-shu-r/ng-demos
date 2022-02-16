@@ -1,10 +1,10 @@
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label"></label>
-  <input type="email" class="form-control-sm" id="filter1" placeholder="write class9 value " [(ngModel)]="class9Search">
+  <input type="email" class="form-control-sm" id="filter" placeholder="write class9 value " [(ngModel)]="class9Search">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label"></label>
-  <input type="email" class="form-control-sm" id="filter2" placeholder="write class10 value" [(ngModel)]="class10Search">
+  <input type="email" class="form-control-sm" id="filter1" placeholder="write class10 value" [(ngModel)]="class10Search">
 </div>
 
 <table class="table caption-top">
@@ -18,7 +18,7 @@
       <th scope="col">Class 12</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="style">
     <tr *ngFor="let subject of subjectArr | filter:class9Search | filter:class10Search">
       <th scope="row">{{subject.sno}}</th>
       <td>{{subject.class9}}</td>

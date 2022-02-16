@@ -1,0 +1,66 @@
+<!-- <p>class works!</p> -->
+
+<!-- <nav class="navbar navbar-light bg-primary">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+         
+          <button type="button" class="btn btn-primary" aria-current="page" >List of Class</button>
+        </li>
+    </ul>
+  </nav> -->
+  
+  <button mat-raised-button class="move" [matMenuTriggerFor]="index">Class Index</button>
+  <mat-menu #index="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subject1">Class 7</button>
+    <button mat-menu-item [matMenuTriggerFor]="subject2">Class 8</button>
+    <button mat-menu-item [matMenuTriggerFor]="subject3">Class 9</button>
+    <button mat-menu-item [matMenuTriggerFor]="subject4">Class 10</button>
+  </mat-menu>
+  
+  <mat-menu #subject1="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subjects1">Subjects</button>
+  </mat-menu>
+  
+  <mat-menu #subject2="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subjects2">Subjects</button>
+  </mat-menu>
+  
+  <mat-menu #subject3="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subjects3">Subjects</button>
+  </mat-menu>
+  
+  <mat-menu #subject4="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subjects4">Subjects</button>
+  </mat-menu>
+  
+  <mat-menu #subjects1="matMenu">
+    <button mat-menu-item>Maths</button>
+    <button mat-menu-item>Chemistry</button>
+    <button mat-menu-item>Biology</button>
+    <button mat-menu-item>History</button>
+    <button mat-menu-item>Civics</button>
+  </mat-menu>
+  
+  <mat-menu #subjects2="matMenu">
+    <button mat-menu-item>HTML</button>
+    <button mat-menu-item>CSS</button>
+    <button mat-menu-item>JavaScript</button>
+    <button mat-menu-item>JQuery</button>
+    <button mat-menu-item>Angular</button>
+  </mat-menu>
+  
+  <mat-menu #subjects3="matMenu">
+    <button mat-menu-item>Python</button>
+    <button mat-menu-item>C++</button>
+    <button mat-menu-item>Java</button>
+    <button mat-menu-item>C</button>
+    <button mat-menu-item>React</button>
+  </mat-menu>
+  
+  <mat-menu #subjects4="matMenu">
+    <button mat-menu-item>Operating System</button>
+    <button mat-menu-item>Data Structure</button>
+    <button mat-menu-item>TOC</button>
+    <button mat-menu-item>Machine Learning</button>
+    <button mat-menu-item>Big Data</button>
+  </mat-menu>

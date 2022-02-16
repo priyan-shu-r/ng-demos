@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { FilterPipe } from './appPipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    FilterPipe
+    FilterPipe,
+    
   ],
   imports: [
     BrowserModule,
