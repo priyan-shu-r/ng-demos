@@ -1,0 +1,25 @@
+.parent{
+    width: 10%;
+    height: 50px;
+    border: 1px saddlebrown;
+    padding: 10px;
+    margin: 40px;
+    display: inline-block;
+    background-color: lightblue;
+}
+
+td{
+    position: relative;
+    border: 10px hotpink;
+    top: 43px;
+    right: 5px;
+    width: 49%;
+    padding-top: 20px;
+    background-color: antiquewhite;
+}
+
+.txt{
+    position: relative;
+    top: 40px;
+    right: 5px;
+}

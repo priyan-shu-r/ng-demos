@@ -1,0 +1,60 @@
+<!-- <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"></label>
+  <input type="search" class="form-control-sm" id="filter" placeholder="write class9 value " [(ngModel)]="class9Search">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"></label>
+  <input type="search" class="form-control-sm" id="filter1" placeholder="write class10 value" [(ngModel)]="class10Search">
+</div> -->
+
+<!-- <table class="table caption-top">
+
+  <thead class="table-dark">
+    <tr>
+      <th class="c1">Class 9</th>
+      <th class="c2">Class 10</th>
+      <th class="c3">Class 11</th>
+      <th class="c4">Class 12</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+
+    <tr *ngFor="let subject of subjectArr  | filter: class10Search">
+     
+      <td class="d1">{{subject.class9}}</td>
+      <td class="d2">{{subject.class10}}</td>
+      <td class="d3">{{subject.class11}}</td>
+      <td class="d4">{{subject.class12}}</td>
+    </tr>
+  </tbody>
+  
+</table> -->
+
+<!-- <div class="header">
+  <div class="hchild">
+    <input type="text" placeholder="class9">
+  <div *ngFor="let class of classArr | filter: class9Search">
+     <th>{{class.name1}}</th>
+     <th>{{class.name2}}</th>
+     <th>{{class.name3}}</th>
+     <th>{{class.name4}}</th>
+  </div>
+</div>
+
+<div class="">
+  <tr *ngFor="let subject of subjectArr">
+     
+    <td class="d1">{{subject.class9}}</td>
+    <td class="d2">{{subject.class10}}</td>
+    <td class="d3">{{subject.class11}}</td>
+    <td class="d4">{{subject.class12}}</td>
+  </tr>
+</div>
+
+</div> -->
+
+<app-class [class]="classArr[0]" [subjectList]="subject1Arr"></app-class>
+<app-class [class]="classArr[1]" [subjectList]="subject2Arr"></app-class>
+<app-class [class]="classArr[2]" [subjectList]="subject3Arr"></app-class>
+<app-class [class]="classArr[3]" [subjectList]="subject4Arr"></app-class>

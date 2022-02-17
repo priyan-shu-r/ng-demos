@@ -1,0 +1,32 @@
+<!-- <p>class works!</p> -->
+
+<div class="parent">
+    <div class="child">
+<table>
+ <tr>
+    <th>{{class}}</th>
+ </tr>
+
+ <input type="text" class="txt" id="search" [(ngModel)]="data">
+
+ <ng-container *ngIf="(subjectList | filter : data) as pass">
+
+    <tr *ngFor="let subject of pass">
+
+    <td>{{subject}}</td>
+
+   </tr>
+   <br>
+   <br>
+
+   <p *ngIf="pass.length === 0"><b>{{data}}</b> not found</p>
+
+   </ng-container>
+
+</table>
+</div>
+</div>
+
+<!-- <div *ngFor="let subject of subject ">
+
+</div> -->
