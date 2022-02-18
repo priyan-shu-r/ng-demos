@@ -1,0 +1,41 @@
+
+    
+            <div class="basic" [formGroup]="ReactiveForm">
+              <label><b>Name</b><span style="display: inline-block; color: red;" > *</span></label><br>
+              <input type="text" formControlName="name" class="form-control" placeholder="" required><br>
+              <small class="error" *ngIf="name.errors?.['required'] && name.touched">Name is Required</small>
+              <small class="error" *ngIf="name.errors?.['pattern']">Multi spaces is not be allowed</small>
+              <br>
+              <br>
+              <label><b>Email</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="text" placeholder="" required>
+              <br>
+              <br>
+              <label class="add1"><b>Address</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="add1"  placeholder="" required>
+              <br>
+              <br>
+              <label class="add2"><b>Address2</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="add2"  placeholder="" required>
+              <br>
+              <br>
+              <label class="zip"><b>Zip Code</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="zip" placeholder="" required>
+              <br>
+              <label class="city"><b>City</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="city" placeholder="" required>
+              <br>
+              <label class="state"><b>State/Province/Region</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="state" placeholder="" required>
+              <br>
+              <label class="country"><b>Country</b><span style="display: inline-block; color: red;" >*</span></label><br>
+              <input type="country" placeholder="" required>
+            </div>
+
+            <div>
+                <input type="button" class="btn1" value="Submit">
+                <input type="button" class="btn2" value="Reset">
+            </div>
+            
+            
+ 

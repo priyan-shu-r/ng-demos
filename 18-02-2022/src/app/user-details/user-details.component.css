@@ -1,0 +1,153 @@
+input[type=text]{
+    width: 90%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 60px;
+
+  }
+
+  label{
+      font-size: 20px;
+      position: relative;
+      left: 60px;
+  }
+
+  form{
+      border: 1px solid hotpink;
+  }
+
+  input[type=add1]{
+      width: 45%;
+      height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 60px;
+  }
+
+  input[type=add2]{
+    width: 20%;
+    height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 960px;
+  bottom: 105px;
+}
+
+.add2{
+    position: relative;
+    left: 960px;
+    bottom: 105px;
+}
+
+input[type=zip]{
+    width: 20%;
+    height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 1390px;
+  bottom: 210px;
+}
+
+.zip{
+    position: relative;
+    left: 1390px;
+    bottom: 212px;
+}
+
+input[type=city]{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 60px;
+bottom: 200px;
+}
+
+.city{
+  position: relative;
+  left: 60px;
+  bottom: 202px;
+}
+
+input[type=state]{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 670px;
+bottom: 289px;
+}
+
+.state{
+  position: relative;
+  left: 670px;
+  bottom: 289px;
+}
+
+input[type=country]{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 1258px;
+bottom: 378px;
+}
+
+.country{
+  position: relative;
+  left: 1258px;
+  bottom: 378px;
+}
+
+.btn1{
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 340px;
+  left: 60px;
+  background-color: Blue;
+  color: #FFFFFF;
+}
+ 
+
+.btn2{
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 340px;
+  left: 80px;
+  background-color: gray;
+  color: #FFFFFF;
+  
+}
