@@ -1,0 +1,240 @@
+#name{
+    width: 90%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    /* border: 1px solid gray; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 60px;
+    
+  }
+
+  #email{
+    width: 90%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 60px;
+  }
+
+  label{
+      font-size: 20px;
+      position: relative;
+      left: 60px;
+  }
+
+
+  #address{
+      width: 45%;
+      height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 60px;
+  }
+
+  #address2{
+    width: 20%;
+    height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 960px;
+  bottom: 125px;
+}
+
+.add2{
+    position: relative;
+    left: 960px;
+    bottom: 125px;
+}
+
+#zip{
+    width: 20%;
+    height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 1390px;
+  bottom: 230px;
+}
+
+.zip{
+    position: relative;
+    left: 1390px;
+    bottom: 232px;
+}
+
+#city{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+/* border: 1px solid #ccc; */
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 60px;
+bottom: 200px;
+}
+
+.city{
+  position: relative;
+  left: 60px;
+  bottom: 202px;
+}
+
+#state{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+/* border: 1px solid #ccc; */
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 670px;
+bottom: 305px;
+}
+
+.state{
+  position: relative;
+  left: 670px;
+  bottom: 309px;
+}
+
+#country{
+  width: 27%;
+  height: 50px;
+padding: 12px 20px;
+margin: 8px 0;
+/* border: 1px solid #ccc; */
+border-radius: 4px;
+box-sizing: border-box;
+position: relative;
+left: 1258px;
+bottom: 410px;
+}
+
+.country{
+  position: relative;
+  left: 1258px;
+  bottom: 415px;
+}
+
+.btn1{
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 340px;
+  left: 60px;
+  background-color: Blue;
+  color: #FFFFFF;
+}
+ 
+
+.btn2{
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 340px;
+  left: 80px;
+  background-color: gray;
+  color: #FFFFFF;
+  
+}
+
+input[type=text].ng-touched.ng-invalid{
+  border: 1px solid red;
+  background-image:"assets/cros.jpg";
+}
+
+.validation{
+  position: relative;
+  left: 60px;
+  color: red;
+}
+
+.validation1{
+  position: relative;
+  left: 51%;
+  bottom: 130px;
+  color: red;
+}
+
+.validation2{
+  position: relative;
+  left: 74%;
+  bottom: 235px;
+  color: red;
+}
+
+.validation3{
+  position: relative;
+  left: 3.4%;
+  bottom: 200px;
+  color: red;
+}
+
+.validation4{
+  position: relative;
+  left: 36%;
+  bottom: 305px;
+  color: red;
+}
+
+.validation5{
+  position: relative;
+  left: 40%;
+  bottom: 368px;
+  color: red;
+}
+
+.name.ng-invalid{
+  color: red;
+}
+
+.email.ng-invalid{
+  color: red;
+}
+
+.address.ng-invalid{
+  color: red;
+}
+
+#addres.ng-invalid{
+  color: red;
+}
+
+#ziip.ng-invalid{
+  color: red;
+}
+
+#citi.ng-invalid{
+  color: red;
+}
+
+#state.ng-invalid{
+  color: red;
+}
+
+#count.ng-invalid{
+  color: red;
+}

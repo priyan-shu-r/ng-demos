@@ -1,0 +1,58 @@
+<div class="parent">
+
+  
+  <div class="child" [formGroup]="ReactiveForm">
+      <label class="name" [ngClass]="{ 'ng-invalid': name.invalid && (name.dirty || name.touched) }"><b>Name</b><span style="display: inline-block; color: red;" > *</span></label><br>
+      <input type="text" id="name" formControlName="name" class="form-control"   required><br>
+      <small *ngIf="name.errors?.['required'] && name.touched" class="validation">Name is Required</small>
+      <small *ngIf="name.errors?.['pattern']" class="validation">Multi spaces is not be allowed</small>
+      <br>
+      <br>
+      <label class="email" [ngClass]="{ 'ng-invalid': email.invalid && (email.dirty || email.touched) }"><b>Email</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="email" formControlName="email" class="form-control" title="abc@xyz.com" required><br>
+      <small *ngIf="email.touched && email.hasError('required')" class="validation">Email is Required</small>
+      <small *ngIf="email.errors?.['pattern']" class="validation">Invalid Email</small>
+      <br>
+      <br>
+      <label class="add1" class="address" [ngClass]="{ 'ng-invalid': address.invalid && (address.dirty || address.touched) }"><b>Address</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="address" placeholder="" formControlName="address" class="form-control" required><br>
+      <small *ngIf="address.errors?.['required'] && address.touched" class="validation">Address is Required</small>
+      <small *ngIf="address.errors?.['pattern']" class="validation">Invalid Address</small>
+      <br>
+      <br>
+      <label class="add2" id="addres" [ngClass]="{ 'ng-invalid': address2.invalid && (address2.dirty || address2.touched) }"><b>Address2</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="address2" placeholder="" formControlName="address2" class="form-control" required><br>
+      <small *ngIf="address2.errors?.['required'] && address2.touched" class="validation1">Address2 is Required</small>
+      <small *ngIf="address2.errors?.['pattern']" class="validation1">Invalid Address2</small>
+      
+      <br>
+      <label class="zip" id="ziip" [ngClass]="{ 'ng-invalid': zip.invalid && (zip.dirty || zip.touched) }"><b>Zip Code</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="zip" placeholder="" formControlName="zip" class="form-control" required><br>
+      <small *ngIf="zip.errors?.['required'] && zip.touched" class="validation2">Zip Code is Required</small>
+      <small *ngIf="zip.errors?.['pattern']" class="validation2">Invalid Zip Code</small>
+      <br>
+      <label class="city" id="citi" [ngClass]="{ 'ng-invalid': city.invalid && (city.dirty || city.touched) }"><b>City</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="city" placeholder="" formControlName="city" class="form-control" required><br>
+      <small *ngIf="city.errors?.['required'] && city.touched" class="validation3">City is Required</small>
+      <small *ngIf="city.errors?.['pattern']" class="validation3">Invalid City</small>
+      
+      <br>
+      <label class="state" id="sate" [ngClass]="{ 'ng-invalid': state.invalid && (state.dirty || state.touched) }"><b>State/Province/Region</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="state" placeholder="" formControlName="state" class="form-control" required><br>
+      <small *ngIf="state.errors?.['required'] && state.touched" class="validation4">State is Required</small>
+      <small *ngIf="state.errors?.['pattern']" class="validation4">Invalid State</small>
+      <br>
+      <label class="country" id="count" [ngClass]="{ 'ng-invalid': country.invalid && (country.dirty || country.touched) }"><b>Country</b><span style="display: inline-block; color: red;" >*</span></label><br>
+      <input type="text" id="country" placeholder="" formControlName="country" class="form-control" required>
+      <small *ngIf="country.errors?.['required'] && country.touched" class="validation5">Country is Required</small>
+      <small *ngIf="country.errors?.['pattern']" class="validation5">Invalid Country</small>
+    </div>
+  </div>
+  
+  
+    <div>
+        <input type="button" class="btn1" value="Submit" (click)="apply()">
+        <input type="button" class="btn2" value="Reset" (click)="reset()">
+    </div>
+  
+    <!-- {{ReactiveForm.value | json}} -->
