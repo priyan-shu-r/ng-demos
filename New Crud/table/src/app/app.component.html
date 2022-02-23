@@ -1,0 +1,57 @@
+<div class="parent">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr class="table-default">
+        <td><input type="text" placeholder="Enter First Name" class="form-control" #frstNm></td>
+        <td><input type="text" placeholder="Enter Last Name" class="form-control" #lstNm></td>
+        <td><button type="button" class="btn btn-success" (click)="addName(frstNm.value.trim(),lstNm.value.trim(),false)">Add</button></td>
+      </tr>  
+      
+        <tr *ngFor="let data of userName, let i=index">
+        
+        <td>
+          <div *ngIf="!data.isEdit">
+          {{data.firstName}}
+          </div>
+          <div *ngIf="data.isEdit" class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="data.firstName" placeholder="Enter First Name">
+          </div>
+        </td>
+
+        <td>
+        <div *ngIf="!data.isEdit">
+          {{data.lastName}}
+        </div>
+        <div *ngIf="data.isEdit" class="form-group">
+         <input type="text" class="form-control" [(ngModel)]="data.lastName" placeholder="Enter Last Name">
+        </div>
+        </td>
+        
+
+        
+       
+        <td *ngIf="!data.isEdit">
+          <button type="button" class="btn btn-primary" (click)="isEdit(i)">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="delete(i)">Delete</button>
+        </td>
+  
+        <td *ngIf="data.isEdit">
+          <button type="button" class="btn btn-primary" (click)="isSave(i)">Save</button>
+          <button type="button" class="btn btn-danger" (click)="isCancel(i)">Cancel</button>
+        </td>
+      
+      </tr>
+      
+    </tbody>
+
+    
+  </table>
+  </div>

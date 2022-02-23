@@ -1,0 +1,14 @@
+.btn
+{
+    margin-right:1%;
+}
+
+.parent
+{
+    width: 90%;
+    position: relative;
+    left: 5%;
+    top: 70px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
