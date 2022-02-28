@@ -1,0 +1,43 @@
+<h1 class="header">Get API from Json Placeholder</h1>
+
+
+<div class="panel-body">
+    <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+    
+    <tbody *ngFor="let user of users">
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.street}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
