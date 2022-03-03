@@ -1,0 +1,121 @@
+<h1 class="header"><b>Create Your Account</b></h1>
+<br><br><br><br><br><br>
+
+<div class="parent-conatainer">
+    <div class="child-conatainer">
+
+<mat-horizontal-stepper #stepper>
+    
+    <mat-step  [stepControl]="firstFormGroup" errorMessage="First name is required.">
+        <ng-template matStepLabel>Personal Information</ng-template>
+            <form [formGroup]="firstFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Enter your first name</mat-label>
+                <input matInput formControlName="first1Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your last name</mat-label>
+                    <input matInput formControlName="first2Ctrl" required>
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter the Email Address</mat-label>
+                    <input matInput formControlName="first3Ctrl" required>
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="first4Ctrl" required>
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose your birth date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <div>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+        
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Last name is required.">
+        <ng-template matStepLabel>Address</ng-template>
+
+            <form [formGroup]="secondFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Street Address</mat-label>
+                <input matInput formControlName="second1Ctrl" required>
+                </mat-form-field>
+<br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Street Address Line 2</mat-label>
+                    <input matInput formControlName="second2Ctrl" required>
+                    </mat-form-field>
+<br>
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="second3Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field appearance="fill">
+                    <mat-label>State/Province</mat-label>
+                    <input matInput formControlName="second4Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+<br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Postal/Zipcode</mat-label>
+                    <input matInput formControlName="second5Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Country</mat-label>
+                    <input matInput formControlName="second6Ctrl" required>
+                </mat-form-field>
+
+                <div>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup" errorMessage="Email is Required">
+        <ng-template matStepLabel>Profile</ng-template>
+        
+            <form [formGroup]="thirdFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Choose your Profile Photos</mat-label>
+                <input matInput formControlName="third1Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+                <div>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="fourthFormGroup" errorMessage="Phone Number is Required">
+        <ng-template matStepLabel>Review</ng-template>
+            <form [formGroup]="fourthFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Review</mat-label>
+                <input matInput formControlName="fourth1Ctrl" required>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+                
+                    <ng-template matStepLabel>Signup</ng-template>
+                    <div>
+                      <button class="reset" mat-raised-button color="accent" (click)="stepper.reset()">Reset</button>&nbsp;
+                      <button class="sign" mat-raised-button color="primary" (click)="sign()">Sign Up</button>
+                  </div>
+                
+            </form>
+      </mat-step> 
+    
+  </mat-horizontal-stepper>
+</div>
+</div>
+  
