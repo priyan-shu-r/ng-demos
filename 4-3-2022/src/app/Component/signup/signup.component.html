@@ -1,0 +1,166 @@
+<h1 class="header"><b>Create Your Account</b></h1>
+<br><br><br><br><br><br>
+
+<div class="parent-conatainer">
+    <div class="child-conatainer">
+
+<mat-horizontal-stepper #stepper>
+    
+    <mat-step  [stepControl]="firstFormGroup" >
+        <ng-template matStepLabel completed="false">Personal Information</ng-template>
+            <form [formGroup]="firstFormGroup">
+                <mat-form-field appearance="fill" >
+                <mat-label>Enter your first name</mat-label>
+                <input matInput formControlName="first1Ctrl">
+                </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your last name</mat-label>
+                    <input matInput formControlName="first2Ctrl">
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter the Email Address</mat-label>
+                    <input matInput formControlName="first3Ctrl">
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="first4Ctrl">
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose your birth date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <div>
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                
+                </div>
+            </form>
+        
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel >Address</ng-template>
+
+            <form [formGroup]="secondFormGroup">
+                <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+                <mat-label>Street Address</mat-label>
+                <input maxlength="20" matInput formControlName="second1Ctrl">
+                
+                </mat-form-field>
+<br>
+                <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+                    <mat-label>Street Address Line 2</mat-label>
+                    <input maxlength="20" matInput formControlName="second2Ctrl" >
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <mat-select>
+                            <mat-option value="India">India</mat-option>
+                            <mat-option value="SriLanka">SriLanka</mat-option>
+                            <mat-option value="Australia">Australia</mat-option>
+                        </mat-select>
+                      
+                        <!-- <input matInput formControlName="second3Ctrl" > -->
+                    </mat-form-field>&nbsp;&nbsp;&nbsp;    
+
+         
+
+                <mat-form-field appearance="fill">
+                    <mat-label>State/Province</mat-label>
+                    <mat-select>
+                        <mat-option value="">Uttrakhand</mat-option>
+                        <mat-option value="">Bihar</mat-option>
+                        <mat-option value="">Uttar Pradesh</mat-option>
+                    </mat-select>
+                    <input matInput formControlName="second4Ctrl" >
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+<br>
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <mat-select>
+                        <mat-option value="patna">Patna</mat-option>
+                        <mat-option value="noida">Noida</mat-option>
+                        <mat-option value="Dehradun">Dehradun</mat-option>
+                    </mat-select>
+                    <!-- <input matInput formControlName="second5Ctrl" > -->
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field hintLabel="Max 6 number" appearance="fill">
+                    <mat-label>Postal/Zipcode</mat-label>
+                    <input maxlength="6" matInput formControlName="second6Ctrl" >
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+                
+                
+
+                <div>
+                <button mat-raised-button color="warn" matStepperPrevious>Back</button> 
+                &nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" matStepperNext>Next</button></div>
+                
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup">
+        <ng-template matStepLabel>Profile</ng-template>
+        
+            <form [formGroup]="thirdFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Choose File</mat-label>
+                <ngx-mat-file-input matInput formControlName="third1Ctrl"></ngx-mat-file-input>&nbsp;&nbsp;&nbsp;
+                </mat-form-field>
+                <div>
+                <button mat-raised-button color="warn" matStepperPrevious>Back</button>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="fourthFormGroup">
+        <ng-template matStepLabel>Review</ng-template>
+            <form [formGroup]="fourthFormGroup">
+                <!-- <mat-form-field appearance="fill"> -->
+                <mat-label>First Name</mat-label>
+                <div>{{firstFormGroup.value.first1Ctrl}}"</div>
+                <!-- </mat-form-field> -->
+                &nbsp;&nbsp;&nbsp;
+                <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput value="{{firstFormGroup.value.first2Ctrl}}">
+                </mat-form-field><br>
+                <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput value={{firstFormGroup.value.first3Ctrl}}>
+                </mat-form-field><br>
+                <mat-form-field appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput value="{{firstFormGroup.value.first4Ctrl}}">
+                </mat-form-field><br>
+                <mat-form-field appearance="fill">
+                <mat-label>Street Address</mat-label>
+                <input matInput value="{{secondFormGroup.value.second1Ctrl}}">
+                </mat-form-field><br>
+                <mat-form-field appearance="fill">
+                <mat-label>Street Address Line 2</mat-label>
+                <input matInput value="{{secondFormGroup.value.second2Ctrl}}">
+                </mat-form-field>
+                
+                <ng-template matStepLabel>Signup</ng-template>
+                    <div>
+                      <button class="reset" mat-raised-button color="accent" matStepperPrevious>Back</button>&nbsp;
+                      <button class="sign" mat-raised-button color="primary">Sign Up</button>
+                    </div>
+                
+            </form>
+      </mat-step> 
+    
+  </mat-horizontal-stepper>
+</div>
+</div>
+  
