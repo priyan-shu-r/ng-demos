@@ -1,0 +1,201 @@
+
+<h1 class="header"><b>Create Your Account</b></h1>
+<br><br><br><br><br><br>
+
+<div class="parent-conatainer">
+    <div class="child-conatainer">
+
+<mat-horizontal-stepper #stepper>
+    
+    <mat-step  [stepControl]="firstFormGroup">
+        <ng-template matStepLabel completed="false">Personal Information</ng-template>
+            <form [formGroup]="firstFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Enter your first name</mat-label>
+                <input matInput formControlName="first1Ctrl">
+                <small class="error" *ngIf="first1Ctrl.errors?.['required'] && first1Ctrl.touched">Name is Required</small>
+                <small class="error" *ngIf="first1Ctrl.errors?.['pattern']">Multi spaces is not be allowed</small>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your last name</mat-label>
+                    <input matInput formControlName="first2Ctrl">
+                    <small class="error" *ngIf="first2Ctrl.errors?.['required'] && first2Ctrl.touched">Last Name is Required</small>
+                    <small class="error" *ngIf="first2Ctrl.errors?.['pattern']">Multi spaces should not be allowed</small>
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter the Email Address</mat-label>
+                    <input matInput formControlName="first3Ctrl">
+                    <small class="error" *ngIf="first3Ctrl.errors?.['required'] && first3Ctrl.touched">Email is Required</small>
+                    <small class="error" *ngIf="first3Ctrl.errors?.['pattern']">Invalid Email</small>
+                </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="firstpass1Ctrl" title="password contain uppercase, lowercase, number and special character">
+                <small class="error" *ngIf="firstpass1Ctrl.errors?.['required'] && firstpass1Ctrl.touched">Password is Required</small>
+                <small class="error" *ngIf="firstpass1Ctrl.errors?.['pattern']">Invalid Password</small>
+                </mat-form-field>
+        <br>
+        <ng-container *ngIf="!firstpass1Ctrl.errors?.['pattern']">
+        <mat-form-field appearance="fill">
+          <mat-label>Confirm Password</mat-label>
+          <input type="password" matInput formControlName="firstpass2Ctrl" title="password contain uppercase, lowercase, number and special character">
+          <small class="error" *ngIf="firstpass2Ctrl.errors?.['required'] && firstpass2Ctrl.touched">Invalid Password</small>
+          <small class="error" *ngIf="firstpass2Ctrl.value != firstpass1Ctrl.value">Password Invalid, write the same password</small>
+        </mat-form-field>
+    </ng-container>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="first4Ctrl">
+            <small class="error" *ngIf="first4Ctrl.errors?.['required'] && first4Ctrl.touched">Phone Number is Required</small>
+            <small class="error" *ngIf="first4Ctrl.errors?.['pattern']">Phone Number must be 10 digits</small>
+            </mat-form-field>
+        <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose your birth date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="first5Ctrl"  (dateInput)="dateName($event)">
+                    <mat-datepicker-toggle matSuffix [for]="picker" startView="Year"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <div>
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+        
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel >Address</ng-template>
+
+            <form [formGroup]="secondFormGroup">
+                <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+                <mat-label>Street Address</mat-label>
+                <input maxlength="20" matInput formControlName="second1Ctrl">
+                <small class="error" *ngIf="second1Ctrl.errors?.['required'] && second1Ctrl.touched">Address is Required</small>
+                <small class="error" *ngIf="second1Ctrl.errors?.['pattern']">Address is Required</small>
+                </mat-form-field>
+<br>
+                <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+                    <mat-label>Street Address Line 2</mat-label>
+                    <input maxlength="20" matInput formControlName="second2Ctrl">
+                    <small class="error" *ngIf="second2Ctrl.errors?.['required'] && second2Ctrl.touched">Street address is Required</small>
+                <small class="error" *ngIf="second2Ctrl.errors?.['pattern']">Street address is Required</small>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <mat-select formControlName="second3Ctrl">
+                            <mat-option value="India">India</mat-option>
+                            <mat-option value="SriLanka">SriLanka</mat-option>
+                            <mat-option value="Australia">Australia</mat-option>
+                        </mat-select>
+                    </mat-form-field>&nbsp;&nbsp;&nbsp;    
+
+         
+
+                <mat-form-field appearance="fill">
+                    <mat-label>State/Province</mat-label>
+                    <mat-select formControlName="second4Ctrl">
+                        <mat-option value="Uttrakhand">Uttrakhand</mat-option>
+                        <mat-option value="Bihar">Bihar</mat-option>
+                        <mat-option value="Uttar Pradesh">Uttar Pradesh</mat-option>
+                    </mat-select>
+                   
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+<br>
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <mat-select formControlName="second5Ctrl">
+                        <mat-option value="patna">Patna</mat-option>
+                        <mat-option value="noida">Noida</mat-option>
+                        <mat-option value="Dehradun">Dehradun</mat-option>
+                    </mat-select>
+                    
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+                <mat-form-field hintLabel="Max 6 number" appearance="fill">
+                    <mat-label>Postal/Zipcode</mat-label>
+                    <input maxlength="6" matInput formControlName="second6Ctrl">
+                    <small class="error" *ngIf="second6Ctrl.errors?.['required'] && second6Ctrl.touched">Zipcode is Required</small>
+                    <small class="error" *ngIf="second6Ctrl.errors?.['pattern']">Invalid ZipCode</small>
+                </mat-form-field>&nbsp;&nbsp;&nbsp;
+                
+                
+
+                <div>
+                <button mat-raised-button color="warn" matStepperPrevious>Back</button> 
+                &nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" matStepperNext>Next</button></div>
+                
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup">
+        <ng-template matStepLabel>Profile</ng-template>
+        
+            <form [formGroup]="thirdFormGroup">
+                <mat-form-field appearance="fill">
+                <mat-label>Choose File</mat-label>
+                <!-- <img src="rounded" [src]=""> -->
+                <ngx-mat-file-input type="file"  name="uploadFile" formControlName="third1Ctrl" (change)="prop($event)" #fileUpload accept="image/*" ></ngx-mat-file-input>&nbsp;&nbsp;&nbsp;
+                </mat-form-field>
+                <div>
+                <button mat-raised-button color="warn" matStepperPrevious>Back</button>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" matStepperNext (click)="checkImage()" >Next</button>
+                </div>
+            </form>
+    </mat-step>
+
+    <mat-step [stepControl]="fourthFormGroup" class="forth">
+        <ng-template matStepLabel>Review</ng-template>
+            <form [formGroup]="fourthFormGroup" >
+                
+                <mat-label class="fourthForm"><b style="font-size: 17px;">First Name:</b> <b style="color: black;" class="review"> {{firstFormGroup.value.first1Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Last Name:</b><b style="color: black;" class="review">{{firstFormGroup.value.first2Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Email:</b> <b style="color: black;" class="review">{{firstFormGroup.value.first3Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Password:</b> <b style="color: black;" class="review">{{firstFormGroup.value.firstpass1Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Confirm Password:</b> <b style="color: black;" class="review">{{firstFormGroup.value.firstpass2Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Phone Number:</b> <b style="color: black;" class="review">{{firstFormGroup.value.first4Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Date of Birth:</b> <b style="color: black;" class="review">{{firstFormGroup.value.first5Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Street Address:</b> <b style="color: black;" class="review">{{secondFormGroup.value.second1Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Street Address Line 2:</b> <b style="color: black;" class="review">{{secondFormGroup.value.second2Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Country:</b> <b style="color: black;" class="review">{{secondFormGroup.value.second3Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">State/Province:</b><b style="color: black;" class="review">{{secondFormGroup.value.second4Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">City:</b> <b style="color: black;" class="review">{{secondFormGroup.value.second5Ctrl}}</b></mat-label>
+                <br>
+                <mat-label class="fourthForm"><b style="font-size: 17px;">Postal/Zipcode:</b> <b style="color: black;" class="review">{{secondFormGroup.value.second6Ctrl}}</b></mat-label>
+                <br>
+                <!-- <mat-label class="fourthForm"><b style="font-size: 17px;">Profile:</b> <b style="color: black;"  class="review">{{dataimage}}</b></mat-label> -->
+                <br>
+                <!-- <div>Profile<img src="{{dataimage}}" width="10px"></div> -->
+                
+                <br><br>
+               
+                <div>
+                    <button class="reset" mat-raised-button color="accent" matStepperPrevious>Back</button>&nbsp;
+                    <button class="sign" mat-raised-button color="primary">Sign Up</button>
+                </div>
+                
+            </form>
+      </mat-step> 
+    
+    
+  </mat-horizontal-stepper>
+</div>
+</div>
+
