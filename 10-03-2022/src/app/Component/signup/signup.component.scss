@@ -1,0 +1,90 @@
+
+
+.mat-form-field {
+    margin-top: 16px;
+  }
+
+  .header{
+    position: relative;
+    top: 5vh;
+    left: 50vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vh;
+        
+}
+
+.parent-conatainer{
+
+    width: 50%;
+    height: 60%;
+    position: relative;
+    left: 50vh;
+    bottom: 5vh;
+    
+}
+
+.fourthForm{
+   color: black;
+   display: flex;
+}
+
+mat-horizontal-stepper{
+  background-color: #EFF0F3;
+  padding: 10px;
+  height: 75vh;
+}
+
+.imageView{
+  // border: 1px solid black;
+  width: 21%;
+  height: 20%;
+  position: relative;
+  bottom: 530px;
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 250px;
+}
+
+.reviewName{
+  display: flex;
+  margin-left: 20px; 
+  font-size: 15px;
+}
+
+
+//Button
+.personalInfoNext {
+  margin-left: 90%;
+}
+
+.buttonRowAddress{
+  display: flex;
+  margin-top: 150px;
+  justify-content: end;
+}
+
+.buttonRowImage{
+  display: flex;
+  margin-top: 450px;
+  justify-content: end;
+}
+
+.buttonRowReview{
+  display: flex;
+  position: relative;
+  bottom: 250px;
+  justify-content: end;
+}
+
+.login{
+  font-size: 18px;
+}
+
+
+
+
+
