@@ -1,0 +1,120 @@
+@import "~ngx-toastr/toastr";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// @import "../node_modules/bootstrap-icons/icons";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition {
+  opacity: 1 !important;
+  color: blue;
+}
+/* Hide the default sort arrow display: */
+.mat-sort-header-stem {
+  display: none !important;
+}
+.mat-sort-header-pointer-left,
+.mat-sort-header-pointer-right {
+  display: none !important;
+}
+.mat-sort-header-pointer-middle {
+  width: 0px !important;
+  height: 0px !important;
+}
+/* show two carets on top of each other when not sorted takes place: */
+.mat-sort-header-arrow {
+  .mat-sort-header-indicator {
+    &::before {
+      content: "<>";
+      position: absolute;
+      opacity: 1 !important;
+      color: rgba(0, 0, 0, 0.5) !important;
+      font-size: 1em;
+      font-weight: 500;
+      transform: translate(-10%, 20%) rotate(90deg) !important;
+    }
+  }
+}
+
+/* show ascending caret when sorted ascending:*/
+[aria-sort="ascending"] {
+  .mat-sort-header-arrow {
+    .mat-sort-header-indicator {
+      &::before {
+        content: "<";
+        position: absolute;
+        color: rgba(0, 0, 0, 0.5) !important;
+        opacity: 1 !important;
+        font-size: 1em;
+        font-weight: 500;
+        transform: translate(0, 0) rotate(90deg) !important;
+      }
+    }
+  }
+}
+
+/* show descending caret when sorted descending: */
+[aria-sort="descending"] {
+  .mat-sort-header-arrow {
+    .mat-sort-header-indicator {
+      &::before {
+        content: ">";
+        position: absolute;
+        color: rgba(0, 0, 0, 0.5) !important;
+        opacity: 1 !important;
+        font-size: 1em;
+        font-weight: 500;
+        transform: translate(0, -10%) rotate(90deg) !important;
+      }
+    }
+  }
+}
+
+.mat-paginator-outer-container .mat-paginator-container {
+  justify-content: left;
+}
+// html,
+// body {
+//   height: 100%;
+//   margin:0;
+//   padding:0;
+//   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// @import 'bootstrap/dist/css/bootstrap-grid.css';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $health-care-primary: mat.define-palette(mat.$blue-palette);
+// $health-care-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+// $health-care-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $health-care-theme: mat.define-light-theme((
+  // color: (
+    // primary: $health-care-primary,
+    // accent: $health-care-accent,
+    // warn: $health-care-warn,
+  // )
+// ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($health-care-theme);
