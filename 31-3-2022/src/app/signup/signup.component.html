@@ -1,0 +1,117 @@
+<form class="parent" [formGroup]="SignupGroup">
+    <div class="container">
+      <h1><b>Sign Up</b></h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+  
+      <label for="firstName"><b>First Name</b></label>
+      <input type="text" formControlName="firstName" placeholder="Enter First Name" name="firstName" required>
+      <small class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">Name is Required</small>
+      <small class="error" *ngIf="firstName.errors?.['pattern']">Spaces are not be allowed</small>
+                        
+      <br>
+      <label for="lastName"><b>Last Name</b></label>
+      <input type="text" formControlName="lastName"  placeholder="Enter Last Name" name="lastName"> 
+
+      <br>
+      <label for="email"><b>Email</b></label>
+      <input type="text" formControlName="email" placeholder="Enter the Email" name="email" required>
+      <small class="error" *ngIf="email.errors?.['required'] && email.touched">Email is Required</small>
+      <small class="error" *ngIf="email.errors?.['pattern']">Invalid Email</small>
+
+      <br>
+      <label for="psw"><b> Password</b></label>
+      <input type="password" formControlName="password" placeholder="Enter the Password" name="password">
+      <small class="error" *ngIf="password.errors?.['required'] && password.touched">Password is Required</small>
+      <small class="error" *ngIf="password.errors?.['pattern']">Invalid Password</small>
+      <br>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" formControlName="repassword" placeholder="Enter the same Password" name="psw-repeat">
+      <small class="error"
+      *ngIf="repassword.errors?.['required'] && repassword.touched">Invalid Password</small>
+      <small class="error" *ngIf="password.value != repassword.value">Password Invalid, write the same password</small>
+      <br>
+      <label for=""><b>Date of Birth</b></label><br>
+      <input type="date" formControlName="dateofbirth" placeholder="" name="dateofbirth" required><br>
+      <small class="error" *ngIf="dateofbirth.errors?.['required'] && dateofbirth.touched">DOB is Required</small>
+      <br>
+      <label for="address"><b>Address Line 1</b></label>
+      <input type="text" formControlName="address1" placeholder="Enter the Address 1" name="address" required>
+      <small class="error" *ngIf="address1.errors?.['required'] && address1.touched">Address1 is Required</small>
+      <small class="error" *ngIf="address1.errors?.['pattern']">Spaces are not allowed</small>
+      <br>
+      <label for="email"><b>Address Line 2</b></label>
+      <input type="text" formControlName="address2" placeholder="Enter the Address 2" name="address" required>
+      <br>
+      <div class="row mb-3">
+        <div class="form-group col-md-4">
+            <label ><b>Country:</b></label>
+            <select  class="form-control" formControlName="country" (change)="onCountryChange($event)">
+              <option Value="">Choose country</option>
+              <option [value]="country.id"  *ngFor="let country of countries">{{country.name}}</option>
+            </select>
+          </div>
+
+        <div class="form-group col-md-4">
+          <label><b>State:</b></label>
+          <select class="form-control" formControlName="state" (change)="onStateChange($event)">
+            <option Value="" >Choose state</option>
+            <option [value]='state.id' *ngFor="let state of states">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label><b>City:</b></label>
+            <select class="form-control" formControlName="city">
+              <option Value="">Choose city</option>
+              <option [value]="city.id" *ngFor="let city of cities">{{city.name}}</option>
+            </select>
+          </div>
+      </div>
+
+      <br>
+      <label for=""><b>Pincode</b></label>
+      <input type="text" formControlName="pincode" placeholder="Enter the pincode" name="pincode" required>
+      <small class="error" *ngIf="pincode.errors?.['required'] && pincode.touched">Pincode is Required</small>
+      <small class="error" *ngIf="pincode.errors?.['pattern']">Pincode must be 6 digit number and it do not start with 0,1,2,3</small>
+      <br><br><br><br>
+      <div class="clearfix">
+        <!-- <button type="button" routerLink="../login"  class="cancelbtn">Cancel</button> -->
+        <button type="button" (click)="onSubmit()" data-toggle="modal" data-target="#exampleModal" class="signupbtn">Submit</button>
+      </div>
+    </div>
+  </form>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Welcome to Modal</h5>
+      </div>
+      <div class="modal-body">
+       <form [formGroup]="reviewFormGroup">
+        <ul class="list-group">
+          <li class="list-group-item">Full Name: {{SignupGroup.value.firstName}} {{SignupGroup.value.lastName}}</li>
+          <li class="list-group-item">Email: {{SignupGroup.value.email}} </li>
+          <li class="list-group-item">Password: {{SignupGroup.value.password}}</li>
+          <li class="list-group-item">Repeat Password: {{SignupGroup.value.repassword}}</li>
+          <li class="list-group-item">Date of Birth: {{SignupGroup.value.dateofbirth}}</li>
+          <li class="list-group-item">Address Line 1: {{SignupGroup.value.address1}}</li>
+          <li class="list-group-item">Address Line 2: {{SignupGroup.value.address2}}</li>
+          <li class="list-group-item">Country: {{SignupGroup.value.country}}</li>
+          <li class="list-group-item">State: {{SignupGroup.value.state}}</li>
+          <li class="list-group-item">City: {{SignupGroup.value.city}}</li>
+          <li class="list-group-item">Pincode: {{SignupGroup.value.pincode}}</li>
+        </ul>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Confirm</button>&nbsp;
+        <button type="button" class="btn btn-primary">Edit</button>&nbsp;
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"  (click)="resetForm()" >Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
