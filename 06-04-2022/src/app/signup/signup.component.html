@@ -1,0 +1,266 @@
+<form class="parent" [formGroup]="SignupGroup" #redirect>
+    <div class="container">
+      <h1><b>Sign Up</b></h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <p>Required Field <small class="required"><b>*</b></small></p>
+      <label for="firstName"><b>First Name</b><small class="error m-1"><b>*</b></small></label>
+      <input type="text" formControlName="firstName" placeholder="Enter First Name" name="firstName" required>
+     
+      <small class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">Name is Required</small>
+      <small class="error" *ngIf="firstName.errors?.['pattern']">Spaces are not be allowed</small>
+                    
+      <br>
+      <label for="lastName"><b>Last Name</b></label>
+      <input type="text" formControlName="lastName"  placeholder="Enter Last Name" name="lastName"> 
+      <br>
+      
+      <label for="email"><b>Email</b><small class="error m-1"><b>*</b></small></label>
+      <input type="text" formControlName="email" placeholder="Enter the Email" name="email" required>
+      
+      
+      <small class="error" *ngIf="email.errors?.['required'] && email.touched">Email is Required</small>
+      <small class="error" *ngIf="email.errors?.['pattern']">Invalid Email</small>
+      
+      <br>
+      <label  class="mt-1" for="psw"><b >Password</b><small class="error m-1"><b>*</b></small></label>
+      <small class="eyeIcon">
+        <i class="fa-solid fa-eye" *ngIf="showPass"  (click)="showPassword()"></i>
+        <i class="fa-solid fa-eye-slash" *ngIf="!showPass" (click)="hidePassword()" ></i>
+      </small>
+      <input class="password" [value]="showPass?replacedPassword : originalPassword" formControlName="password" (input)="changePassword($event)" placeholder="Enter the Password" name="password">
+      <!-- {{"Original Value:"+originalPassword}}<br>
+      {{"Replace Value:" +replacedPassword}} -->
+     
+      <small class="error" *ngIf="password.errors?.['required'] && password.touched">Password is Required</small>
+      <small class="error" *ngIf="password.errors?.['pattern']">Invalid Password</small>
+      <br>
+      <label class="mt-1"  for="psw-repeat"><b>Repeat Password</b><small class="error m-1"><b>*</b></small></label>
+      <small class="eyeIcon">
+        <i class="fa-solid fa-eye" *ngIf="showRePass" (click)="showRePassword()"></i>
+        <i class="fa-solid fa-eye-slash" *ngIf="!showRePass" (click)="hideRePassword()"></i>
+      </small>
+      <input class="password" [value]="showRePass ? replacedConfirmPassword : originalConfirmPassword" formControlName="repassword" (input)="changeConfirmPassword($event)" placeholder="Enter the same Password" name="psw-repeat">
+      <!-- {{"original Value:"+ originalConfirmPassword}}<br>
+      {{"Replace Value:" + replacedConfirmPassword}} -->
+     
+      <small class="error" *ngIf="repassword.errors?.['required'] && repassword.touched">Invalid Password</small>
+      <small class="error" *ngIf="repassword.touched && originalPassword != originalConfirmPassword">Password Invalid, write the same password</small>
+      
+      <br>
+      <label for=""><b>Date of Birth</b></label><br>
+      <input type="date" formControlName="dateofbirth" [max]="changeDateFormat()" placeholder="" name="dateofbirth" required><br>
+      <small class="error" *ngIf="dateofbirth.errors?.['required'] && dateofbirth.touched">DOB is Required</small>
+      <br>
+      <label for="address"><b>Address Line 1</b><small class="error m-1"><b>*</b></small></label>
+      <input type="text" formControlName="address1" placeholder="Enter the Address 1" name="address" required>
+      
+      <small class="error" *ngIf="address1.errors?.['required'] && address1.touched">Address1 is Required</small>
+      <small class="error" *ngIf="address1.errors?.['pattern']">Spaces are not allowed</small>
+      
+      <br>
+      <label for="email"><b>Address Line 2</b></label>
+      <input type="text" formControlName="address2" placeholder="Enter the Address 2" name="address" required>
+      <br>
+      <div class="row mb-3 dropdown">
+        <div class="form-group col-md-4">
+            <label><b>Country:</b> </label><br>
+            <select class="form-control" formControlName="country" (change)="onCountryChange($event)">
+              <option Value="">Choose country</option>
+              <option [value]="country.name"  *ngFor="let country of countries">{{country.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label><b>State:</b></label>
+          <select class="form-control" formControlName="state" (change)="onStateChange($event)">
+            <option Value="" >Choose state</option>
+            <option [value]='state.name' *ngFor="let state of states">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label><b>City:</b></label>
+            <select class="form-control" formControlName="city">
+              <option Value="">Choose city</option>
+              <option [value]="city.name" *ngFor="let city of cities">{{city.name}}</option>
+            </select>
+          </div>
+      </div>
+
+      <br>
+      <label for=""><b>Pincode</b></label>
+      <input type="text" formControlName="pincode" placeholder="Enter the pincode" name="pincode" required>
+     
+      <small class="error" *ngIf="pincode.errors?.['required'] && pincode.touched">Pincode is Required</small>
+      <small class="error" *ngIf="pincode.errors?.['pattern']">Pincode must be 6 digit number and it do not start with 0,1,2,3</small>
+     
+      <br><br><br><br>
+      <div class="clearfix">
+        <!-- <button type="button" routerLink="../login"  class="cancelbtn">Cancel</button> -->
+        <button type="button" data-toggle="modal" data-target="#exampleModal" class="signupbtn" (click)="onSubmit()">Submit</button> <!-- [disabled]="SignupGroup.invalid" -->
+      </div>
+    </div>
+</form>
+
+<!--Welcome to Modal -->
+<div class="modal fade" id="exampleModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><b>You can edit the details here</b></h5>
+        <!-- <button data-dismiss="modal" class="close"  (click)="close()">Close</button> -->
+      </div>
+      <div *ngIf="!Ediatble" class="modal-body">
+       <form [formGroup]="SignupGroup">
+        <ul class="list-group"> 
+          <li class="list-group-item">
+            First Name: 
+            <ng-container>{{SignupGroup.value.firstName}} {{SignupGroup.value.lastName}}</ng-container> 
+            <!-- <mat-icon class="icon" (click)="open()">create</mat-icon> -->
+            <ng-container *ngIf="editName"><input type="text" formControlName="firstName" placeholder="Enter the First Name" name="firstName" required></ng-container> 
+            <ng-container>
+            <small class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">Name is Required</small>
+            <small class="error" *ngIf="firstName.errors?.['pattern']">Spaces are not be allowed</small>
+            </ng-container>
+            <ng-container *ngIf="editName"><input type="text" formControlName="lastName" placeholder="Enter the Last Name" name="lastName" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            Email: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.email}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="email" placeholder="Enter the Email" name="email" required></ng-container>
+            <small class="error" *ngIf="email.errors?.['required'] && email.touched">Email is Required</small>
+            <small class="error" *ngIf="email.errors?.['pattern']">Invalid Email</small> 
+          </li>
+
+          <li class="list-group-item">
+            Date of Birth: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.dateofbirth}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="dateofbirth" [max]="changeDateFormat()" placeholder="Enter the Date of Birth" name="dateofbirth" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            Address Line 1: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.address1}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="address1" placeholder="Enter the Address 1" name="address1" required></ng-container> 
+            <small class="error" *ngIf="address1.errors?.['required'] && address1.touched">Address1 is Required</small>
+            <small class="error" *ngIf="address1.errors?.['pattern']">Spaces are not allowed</small>
+          </li>
+          <li class="list-group-item">
+            Address Line 2: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.address2}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="address2" placeholder="Enter the Address 2" name="address2" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            Country: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.country}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="country" placeholder="Enter the country" name="country" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            State: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.state}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="state" placeholder="Enter the state" name="state" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            City: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.city}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="city" placeholder="Enter the city" name="city" required></ng-container> 
+          </li>
+          <li class="list-group-item">
+            Pincode: 
+            <ng-container *ngIf="!edit">{{SignupGroup.value.pincode}}</ng-container> 
+            <ng-container *ngIf="edit"><input type="text" formControlName="pincode" placeholder="Enter the Pincode" name="pincode" required></ng-container>
+            <small class="error" *ngIf="pincode.errors?.['required'] && pincode.touched">Pincode is Required</small>
+            <small class="error" *ngIf="pincode.errors?.['pattern']">Pincode must be 6 digit number and it do not start with 0,1,2,3</small> 
+          </li>
+        </ul>
+      </form>
+      </div>
+
+      <!-- On click on Editable button this new Form Group will work -->
+      <div *ngIf="Ediatble" class="modal-body">
+        <form [formGroup]="EditableFormGroup" >
+          <div *ngIf="!showFirstAndLast"  class="form-group mb-2 mt-2">
+            <label for="exampleInputEmail1">Full Name: </label>
+            <ng-container>{{SignupGroup.value.firstName}} {{SignupGroup.value.lastName}}</ng-container> 
+            <i class="fa-solid fa-pencil pencil" (click)="showName()"></i>
+      </div>
+       
+        <div *ngIf="showFirstAndLast" class="form-group mt-2 mb-2">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" formControlName="fname">
+          <small class="error" *ngIf="fname.errors?.['required'] && fname.touched">Name is Required</small>
+          <small class="error" *ngIf="fname.errors?.['pattern']">Spaces are not be allowed</small>
+          <br>
+          <label for="LastName">Last Name</label>
+          <input type="text" class="form-control" formControlName="lname">
+        </div>
+
+        <div>
+        <label for="email">Email</label>
+        <input type="text" formControlName="editEmail" placeholder="Enter the Email" name="email" required>
+        <small class="error" *ngIf="editEmail.errors?.['required'] && editEmail.touched">Email is Required</small>
+        <small class="error" *ngIf="editEmail.errors?.['pattern']">Invalid Email</small>
+        </div>  
+
+        <div>
+        <label for="">Date of Birth</label><br>
+        <input type="date" formControlName="Editdateofbirth" placeholder="" name="dateofbirth" required><br>
+        <small class="error" *ngIf="Editdateofbirth.errors?.['required'] && Editdateofbirth.touched">DOB is Required</small>
+        </div>
+
+        <div>
+         <label for="address">Address Line 1</label>
+         <input type="text" formControlName="Editaddress1" placeholder="Enter the Address 1" name="address" required>
+         <small class="error" *ngIf="Editaddress1.errors?.['required'] && Editaddress1.touched">Address1 is Required</small>
+         <small class="error" *ngIf="Editaddress1.errors?.['pattern']">Spaces are not allowed</small>
+        </div>
+
+        <div>
+          <label for="email">Address Line 2</label>
+          <input type="text" formControlName="Editaddress2" placeholder="Enter the Address 2" name="address" required>
+        </div>
+        
+        <div class="row mb-3 dropdown">
+          <div class="form-group col-md-4">
+              <label><b>Country:</b> </label><br>
+              <select class="form-control" formControlName="Editcountry" (change)="onCountryChange($event)">
+                <option Value="">Choose country</option>
+                <option [value]="country.name"  *ngFor="let country of countries">{{country.name}}</option>
+              </select>
+          </div>
+  
+          <div class="form-group col-md-4">
+            <label><b>State:</b></label>
+            <select class="form-control" formControlName="Editstate" (change)="onStateChange($event)">
+              <option Value="" >Choose state</option>
+              <option [value]='state.name' *ngFor="let state of states">{{state.name}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group col-md-4">
+              <label><b>City:</b></label>
+              <select class="form-control" formControlName="Editcity">
+                <option Value="">Choose city</option>
+                <option [value]="city.name" *ngFor="let city of cities">{{city.name}}</option>
+              </select>
+            </div>
+        </div>
+
+        <div>
+        <label for="">Pincode</label>
+        <input type="text" formControlName="Editpincode" placeholder="Enter the pincode" name="pincode" required>
+        <small class="error" *ngIf="Editpincode.errors?.['required'] && Editpincode.touched">Pincode is Required</small>
+        <small class="error" *ngIf="Editpincode.errors?.['pattern']">Pincode must be 6 digit number and it do not start with 0,1,2,3</small>
+      </div>            
+      </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" routerLink="../login"  (click)="signup()">Confirm</button>&nbsp;
+        <button type="button" class="btn btn-primary" (click)="editForm()">Edit</button>&nbsp;
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"  (click)="resetForm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
