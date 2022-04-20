@@ -1,0 +1,6 @@
+
+<div *ngFor="let list of array" class="container-fluid">
+  <app-thumbnails class="thumbnails" [images]="list.imageUrl" [videoLink]="list.video"></app-thumbnails>&nbsp;&nbsp;&nbsp;&nbsp;    
+  <app-video-details [details]="[list.title,list.duration,list.singer,list.released]"></app-video-details>
+</div>
+

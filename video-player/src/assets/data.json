@@ -1,0 +1,47 @@
+[
+    {
+        "id":"1",
+        "imageUrl":"https://i.ytimg.com/vi/sf4ICWFojUA/maxresdefault.jpg",
+        "video":"assets/Srivali.mp4",
+        "title":"Srivalli",
+        "singer":"Javed Ali",
+        "duration":"5:50 min",
+        "released":"2022"
+    },
+    {
+        "id":"2",
+        "imageUrl":"https://i.ytimg.com/vi/-nvWQxYcz0U/maxresdefault.jpg",
+        "video":"assets/stay.mp4",
+        "title":"Stay",
+        "duration":"2:37 min",
+        "singer":"Justin Bieber",
+        "released":"2020"
+    },
+    {
+        "id":"3",
+        "imageUrl":"https://c.saavncdn.com/592/Naatu-Naatu-From-Rrr--Telugu-2021-20211110131000-500x500.jpg",
+        "video":"assets/naacho.mp4",
+        "title":"Naatu Naatu",
+        "duration":"4:34 min",
+        "singer": "M Keeravani",
+        "released":"2022"
+    },
+    {
+        "id":"4",
+        "imageUrl":"https://i.ytimg.com/vi/59Qu4KGEQfY/hqdefault.jpg",
+        "video":"assets/sultan.mp4",
+        "title":"Sultan",
+        "duration":"3:45 min",
+        "singer": "Srinidhi Sheety",
+        "released":"2020"
+    },
+    {
+        "id":"5",
+        "imageUrl":"https://c.saavncdn.com/286/Salaam-Rocky-Bhai-From-Kgf-Chapter-1--Kannada-2018-20181204130053-500x500.jpg",
+        "video":"assets/salaam.mp4",
+        "title":"Salaam",
+        "duration":"4:14 min",
+        "singer": "Alka Yagnik",
+        "released":"2020"
+    }
+]

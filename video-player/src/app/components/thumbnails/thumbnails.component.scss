@@ -1,0 +1,21 @@
+.card{
+    width: 18rem; 
+    border: 1px solid red; 
+    height: 200px;
+}
+
+.video1{
+    z-index: -1;
+}
+
+.play{
+    // border: 1px solid black;
+    position: relative;
+    // top: 80px;
+    // right: 170px;
+    bottom: 126px;
+    left: 107px;
+    z-index: 3;
+}
+
+
