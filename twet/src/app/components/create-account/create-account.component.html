@@ -1,0 +1,73 @@
+<section class="dialog">
+    <div class="parent-container">
+        <img src="assets/close.png" mat-dialog-close class="close" alt="">
+        <img src="assets/bird.png" class="bird" alt="">
+    </div>
+    <br>
+    <div class="parentAccount">
+
+      <div class="create">
+       <h1><b>Create Your Acccont</b></h1>
+      </div>
+
+      <div>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input type="name" matInput placeholder="">
+            </mat-form-field>
+          </form>
+      </div>
+
+      <div *ngIf="showPhone">
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input type="phone" matInput placeholder="">
+            </mat-form-field>
+          </form>
+      </div>
+
+      <div *ngIf="!showPhone">
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="">
+            </mat-form-field>
+          </form>
+      </div>
+
+      <div *ngIf="showPhone">
+          <span class="email" style="color: #1A8CD8;" (click)="changeToEmail()">Use email Instead</span>
+      </div>
+
+      <div *ngIf="!showPhone">
+        <span class="email" style="color: #1A8CD8;" (click)="changeToPhone()">Use phone Instead</span>
+    </div>
+    <br>
+    <!-- <div>
+        <span class="dob"><b>Date of Birth</b></span>
+        <p style="padding-top: 10px;">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
+    </div>
+    
+    <div>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Month</mat-label>
+          <mat-select name="month">
+            <mat-option>
+               <input type="month">
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </div> -->
+
+    <div class="card-body" style="flex: 0; padding-left: initial;">
+      <div class="btn btn-primary next"><i class="fa-brands fa-facebook-square">&nbsp;&nbsp;</i><b>Next</b></div>
+  </div>
+     
+    
+    </div>  
+
+</section>

@@ -1,0 +1,143 @@
+.parent{
+    // border: 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.child{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 910px;
+}
+
+.left-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-wrapper{
+   width: 100%;
+   height: 910px;
+   background-color: #fff;
+//    max-width: 1000px;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+}
+
+.wrapper-card{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twitterHome{
+    z-index: 1;
+}
+
+.twitterImage{
+    width: 400px;
+    position:absolute;
+    top: 235px;
+    left: 245px;
+    z-index: 2;
+}
+
+.right-col{
+    padding-left: 50px;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid blue;
+    width: 600px;
+}
+
+.right-wrapper{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .bird{
+     width: 100px;
+    }
+     
+  .happening{
+    padding-top: 50px;
+    font-weight: 520;
+    font-size: 70px;
+  }
+  
+ .signin{
+    border-radius: 70px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 18px;
+    padding-left: initial;
+ }
+
+ h5 {
+    display: flex;
+    flex-direction: row;
+    width: 290px;
+  }
+  h5:before, h5:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+  }
+  h5:before {
+    margin-right: 10px
+  }
+  h5:after {
+    margin-left: 10px
+  }
+
+  .horizontal{
+    color: gray;
+  }
+
+  .signup{
+    background-color: #1A8CD8;
+    border-radius: 70px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 18px;
+    padding-left: initial;
+  }
+
+  .paragraph{
+      font-size: 13px;
+      padding-left: initial;
+
+  }
+
+  .accountCheck{
+    font-size: 23px;
+    padding-left: initial;
+    padding-top: 20px;
+  }
+
+  @media (max-width: 1100px){
+    .left-col{
+         display: none;
+    }
+    .child{
+        padding-left: 300px;
+    }
+
+    
+
+  }
+
