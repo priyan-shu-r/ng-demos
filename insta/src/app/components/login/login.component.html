@@ -1,0 +1,35 @@
+<form [formGroup]="loginForm">
+<div class="parent">
+    <div style="width: 30%;" class="leftImg">
+       <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png" alt="" class="img1">
+    </div>
+    <div class="card">
+        <img class="instaImg" src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" width="50%" alt="">
+        <div class="input-group mb-3 pe-4 ps-4">
+            <input type="text" class="form-control" formControlName="email" placeholder="Phone number, username or email" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 pe-4 ps-4">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="card-body"  style="flex: 0; ">
+            <div class="btn btn-primary" style="width: 95%;" (click)="checkValue()">Log in</div>
+        </div>
+
+        <div>
+            <h5 class="horizontal">OR</h5>
+        </div>
+
+        <div class="card-body" style="flex: 0;" >
+            <i  class="fa-brands fa-facebook-square">&nbsp;&nbsp;</i> <a href="https://www.facebook.com/" style="color: black;">Log in with Facebook</a>   
+        </div>
+
+        <a href="" routerLink="/forgot-password" style="color: black;">Forgot Password?</a>
+
+        <div class="child">
+            <div class="card card2"><span style="margin-left: 100px; padding-right: 10px;">Don't have an Account?</span>    
+            <a href="" routerLink="/signup">Sign up</a>
+            </div> 
+        </div>
+    </div>
+</div>
+</form>
