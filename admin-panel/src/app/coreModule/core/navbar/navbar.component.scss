@@ -1,0 +1,72 @@
+
+.example-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+  }
+
+  .mat-list{
+    // border: 1px solid black; 
+    display: flex ; 
+    flex: 1;
+    align-items: center;
+    padding: 0.8445rem 1rem;
+  }
+
+  .mat-list1{
+    // border: 1px solid black; 
+    display: flex ; 
+    flex: 1;
+    align-items: center;
+    padding: 0.8445rem 1rem;
+    position: relative;
+    bottom: 25px;
+  }
+
+  .mat-list2{
+    // border: 1px solid black; 
+    display: flex ; 
+    flex: 1;
+    align-items: center;
+    padding: 0.8445rem 1rem;
+    position: relative;
+    bottom: 45px;
+  }
+
+  
+
+
+  .example-sidenav{
+      background-color:#4f5d73;
+  }
+
+  .coreImage{
+    display: flex ; flex: 1;
+    align-items: center;
+    padding: 0.3445rem 5rem;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: 	#4f5d73;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  .dashboard{
+    font-size: 20px;
+  }
+
+  .badge{
+    font-size: initial;
+  }
+
+  .theme{
+    margin-left: -20px;
+    font-size: 18px;
+  }
