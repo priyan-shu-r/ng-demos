@@ -1,0 +1,210 @@
+<mat-drawer-container class="example-container" autosize>
+    <h1>Priyanshu</h1>
+    <mat-drawer #drawer class="example-sidenav" mode="side" style="width:15%; overflow: hidden;">
+    <div class="wrapper">
+      <img src="assets/coreImages.png" class="coreImage" alt="">
+
+<div class="scrool">
+      <div>
+        <mat-list role="list" class="mat-list">
+            <mat-icon class="speed" [ngStyle]="{'color':'white'}">speedometer</mat-icon>
+            <mat-list-item role="listitem" [ngStyle]="{'color':'white'}" routerLink="/dashboard" class="dashboard">Dashboard</mat-list-item>
+            <span class="badge" class="badge bg-primary">New</span>
+        </mat-list>
+    
+        <mat-list role="list" class="mat-list">
+            <mat-list-item role="listitem" class="theme" [ngStyle]="{'color':'white'}"><b>THEME</b></mat-list-item>
+        </mat-list>
+
+        <mat-list role="list" class="mat-list-colors">
+        <mat-icon [ngStyle]="{'color':'white'}">invert_colors</mat-icon>
+        <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}" >Colors</mat-list-item>
+        </mat-list>
+
+        <mat-list role="list" class="mat-list-typography">
+            <mat-icon [ngStyle]="{'color':'white'}">border_color</mat-icon>
+            <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}" >Typography</mat-list-item>
+        </mat-list>
+
+        <mat-list role="list">
+            <mat-list-item role="listitem" class="theme" [ngStyle]="{'color':'white'}"><b style="position: relative; bottom:60px ">COMPONENTS</b></mat-list-item>
+        </mat-list>
+       </div>
+
+      <!-- Accordion -->
+        <div class="base">
+            <mat-icon [ngStyle]="{'color':'white'}">stars</mat-icon>
+        </div>   
+        
+        <div class="accordian">
+        <mat-accordion>
+              <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+                <mat-expansion-panel-header style="width:180px">
+                  <mat-panel-title [ngStyle]="{'color':'white'}" >
+                    Base
+                  </mat-panel-title>
+                </mat-expansion-panel-header  >
+                <p [ngStyle]="{'color':'white'}">Accordion</p>
+                <p [ngStyle]="{'color':'white'}">Breadcum</p>
+                <p [ngStyle]="{'color':'white'}">Cards</p>
+                <p [ngStyle]="{'color':'white'}">Carousel</p>
+                <p [ngStyle]="{'color':'white'}">Collapse</p>
+                <p [ngStyle]="{'color':'white'}">Light group</p>
+                <p [ngStyle]="{'color':'white'}">Naps</p>
+                <p [ngStyle]="{'color':'white'}">Pagination</p>
+                <p [ngStyle]="{'color':'white'}">Popovers</p>
+                <p [ngStyle]="{'color':'white'}">Scrollspy</p>
+                <p [ngStyle]="{'color':'white'}">Spinners</p>
+                <p [ngStyle]="{'color':'white'}">Tables</p>
+                <p [ngStyle]="{'color':'white'}">Tabs</p>
+                <p [ngStyle]="{'color':'white'}">Tooltips</p>
+                </mat-expansion-panel>
+        </mat-accordion>
+        </div>
+
+        <div class="buttons">
+            <mat-icon class="buttonIcon" [ngStyle]="{'color':'white'}">stars</mat-icon>
+        </div>   
+        
+        <div class="accordian">
+        <mat-accordion>
+              <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+                <mat-expansion-panel-header style="width:180px">
+                  <mat-panel-title [ngStyle]="{'color':'white'}" >
+                    Buttons
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p [ngStyle]="{'color':'white'}">Buttons</p>
+                <p [ngStyle]="{'color':'white'}">Buttons Group</p>
+                <p [ngStyle]="{'color':'white'}">Dropdown</p>
+                </mat-expansion-panel>
+        </mat-accordion>
+        </div>
+        
+        <mat-list role="list" class="charts">
+            <mat-icon [ngStyle]="{'color':'white'}">stars</mat-icon>
+            <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}">Charts</mat-list-item>
+        </mat-list>
+
+     <div class="parent-form">
+        <div class="forms">
+            <mat-icon class="buttonIcon" [ngStyle]="{'color':'white'}">stars</mat-icon>
+        </div>   
+        
+        <div class="accordian">
+        <mat-accordion>
+              <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+                <mat-expansion-panel-header style="width:180px">
+                  <mat-panel-title [ngStyle]="{'color':'white'}" >
+                    Forms
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p [ngStyle]="{'color':'white'}">Form Control</p>
+                <p [ngStyle]="{'color':'white'}">Selects</p>
+                <p [ngStyle]="{'color':'white'}">Checks and Radios</p>
+                <p [ngStyle]="{'color':'white'}">Range</p>
+                <p [ngStyle]="{'color':'white'}">Input group</p>
+                <p [ngStyle]="{'color':'white'}">Floating labels</p>
+                <p [ngStyle]="{'color':'white'}">Layouts</p>
+                <p [ngStyle]="{'color':'white'}">Validation</p>
+                </mat-expansion-panel>
+        </mat-accordion>
+        </div>
+    </div>     
+
+    <div class="parent-icons">
+    <div class="icons">
+        <mat-icon class="buttonIcon" [ngStyle]="{'color':'white'}">stars</mat-icon>
+    </div>   
+    
+    <div class="accordian">
+    <mat-accordion>
+        <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+            <mat-expansion-panel-header style="width:180px">
+              <mat-panel-title [ngStyle]="{'color':'white'}" >
+                Icons
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p [ngStyle]="{'color':'white'}">CoreUI Icons</p>
+            <p [ngStyle]="{'color':'white'}">CoreUI Icons - Brand</p>
+            <p [ngStyle]="{'color':'white'}">CoreUI Icons - Flag</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+    </div>
+    </div>   
+
+    <div class="parent-icons">
+    <div class="icons">
+        <mat-icon class="buttonIcon" [ngStyle]="{'color':'white'}">stars</mat-icon>
+    </div>   
+    
+    <div class="accordian">
+    <mat-accordion>
+        <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+            <mat-expansion-panel-header style="width:180px">
+              <mat-panel-title [ngStyle]="{'color':'white'}" >
+                Notifiactions
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p [ngStyle]="{'color':'white'}">Alerts</p>
+            <p [ngStyle]="{'color':'white'}">Badge</p>
+            <p [ngStyle]="{'color':'white'}">Methods</p>
+            <p [ngStyle]="{'color':'white'}">Toasts</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+    </div>
+    </div>   
+
+    <mat-list role="list" class="widget">
+    <mat-icon class="speed" [ngStyle]="{'color':'white'}">speedometer</mat-icon>
+    <mat-list-item role="listitem" [ngStyle]="{'color':'white'}" class="widgets">Widgets</mat-list-item>
+    <span class="badge" class="badge bg-primary">New</span>
+    </mat-list>
+
+
+<!-- Extras -->
+    <mat-list role="list">
+    <mat-list-item role="listitem" class="theme" [ngStyle]="{'color':'white'}"><b class="extras">EXTRAS</b></mat-list-item>
+    </mat-list>
+
+    <div class="parent-pages">
+    <div class="icons">
+        <mat-icon class="buttonIcon" [ngStyle]="{'color':'white'}">stars</mat-icon>
+    </div>   
+    
+    <div class="accordian">
+    <mat-accordion>
+        <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="background-color: #4f5d73;">
+            <mat-expansion-panel-header style="width:180px">
+              <mat-panel-title [ngStyle]="{'color':'white'}" >
+                Pages
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p [ngStyle]="{'color':'white'}">Login</p>
+            <p [ngStyle]="{'color':'white'}">Register</p>
+            <p [ngStyle]="{'color':'white'}">Error 404</p>
+            <p [ngStyle]="{'color':'white'}">Error 500</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+    </div>
+    </div>
+
+    <div class="parent-docs">
+    <mat-list role="list">
+    <mat-icon [ngStyle]="{'color':'white'}">stars</mat-icon>
+    <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}">Docs</mat-list-item>
+    </mat-list>
+    </div>
+
+    <div class="parent-core">
+    <mat-list role="list">
+    <mat-icon [ngStyle]="{'color':'white'}">stars</mat-icon>
+    <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}">Try CoreUIPro</mat-list-item>
+    </mat-list>
+    </div>
+
+</div>
+</div>
+
+</mat-drawer>
+</mat-drawer-container>

@@ -1,0 +1,30 @@
+<!-- <p>header works!</p> -->
+
+<!-- Top Navbar -->
+
+<div class="header">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          <!-- <mat-icon (click)="drawer.toggle()">format_align_justify</mat-icon> -->
+        </mat-button-toggle>
+    </mat-button-toggle-group>  
+
+<!-- Headers -->    
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="left-row">
+                <span class="header-dashboard" routerLink="/dashboard" >Dashboard</span>
+                <span class="header-user">Users</span>
+                <span class="header-setting">Settings</span>
+            </div>
+          
+    
+          <div class="nav-item">
+              <mat-icon class="icon-notification">notifications_none</mat-icon>&nbsp;&nbsp;&nbsp;
+              <mat-icon class="icon-chart">insert_chart</mat-icon>&nbsp;&nbsp;&nbsp;
+              <mat-icon class="icon-message">message</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="assets/picture.png" class="picture" alt="">
+          </div>
+        </div>
+    </nav>
+</div>
