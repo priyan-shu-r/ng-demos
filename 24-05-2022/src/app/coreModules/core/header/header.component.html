@@ -1,0 +1,80 @@
+<!-- <p>header works!</p> -->
+
+<!-- Top Navbar -->
+
+<div class="header">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          <mat-icon #drawer (click)="showSideNavbar($event)">format_align_justify</mat-icon>
+        </mat-button-toggle>
+    </mat-button-toggle-group>  
+
+<!-- Headers -->    
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="left-row">
+                <span class="header-dashboard">Dashboard</span>
+                <span class="header-user">Users</span>
+                <span class="header-setting">Settings</span>
+            </div>
+          
+        <div class="nav-item">
+              <mat-icon class="icon-notification">notifications_none</mat-icon>&nbsp;&nbsp;&nbsp;
+              <mat-icon class="icon-chart">insert_chart</mat-icon>&nbsp;&nbsp;&nbsp;
+              <mat-icon class="icon-message">message</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="assets/png-images/picture.png" [matMenuTriggerFor]="menu" class="picture" alt="">
+        </div>
+        <mat-menu #menu="matMenu"  xPosition="before" >
+            <button class="account-header">
+                <span class="account"><b>Account</b></span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notification_important</mat-icon>
+              <span>Update</span>
+              <!-- <span> <button style="margin-left: 25px;" mat-raised-button color="primary">8</button></span> -->
+            </button>
+            <button mat-menu-item>
+              <mat-icon>mail outline icon</mat-icon>
+              <span>Message</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Task</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon> chat_bubble_outline</mat-icon>
+                <span>Comments</span>
+            </button>
+
+            <button class="account-header">
+                <span class="account"><b>Settings</b></span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>supervisor_account</mat-icon>
+                <span>profile</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                <span>Settings</span>
+              </button>
+              <button mat-menu-item>
+                  <mat-icon>credit_card</mat-icon>
+                  <span>Payment</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>file_copy</mat-icon>
+                <span>Project</span>
+              </button>
+              <hr>
+              <button mat-menu-item>
+                <mat-icon>lock</mat-icon>
+                <span>Lock Account</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>logout</mat-icon>
+                <span (click)="logout()">Logout</span>
+              </button>
+          </mat-menu>
+        </div>
+    </nav>
+</div>

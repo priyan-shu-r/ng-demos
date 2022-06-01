@@ -1,0 +1,20 @@
+<mat-drawer-container>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-md-2" style="padding: 0%; width: 14.66%;" >
+                <app-side-navbar [showMenu]="isClicked"></app-side-navbar>
+            </div>
+        
+            <div class="col-md-10" style=" height: 100vh; padding: 0%;" [ngStyle]="isClicked?{'width':'83.3%'}: {'width':'100%'}">
+                <app-header (toggleSideNavbar)="closeMenu($event)"></app-header>
+                <div class="col-md-12">
+                    <div class="row-md-12" style=" height: 93vh;">
+                        <app-dashboard></app-dashboard>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    
+    </div>
+    </mat-drawer-container>

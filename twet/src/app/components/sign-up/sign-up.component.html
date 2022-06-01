@@ -1,0 +1,35 @@
+<section class="dialog">
+    <div class="parent-container">
+        <img src="assets/close.png" mat-dialog-close class="close" alt="">
+        <img src="assets/bird.png" class="bird" alt="">
+    </div>
+    
+    <div class="twitterSignin">
+        <h2 style="margin-left: 27%; font-size: 30px; padding-top: 30px;">Join Twitter Today</h2>
+    
+        <div class="card-body" style="flex: 0; padding-left: initial; ">
+            <div class="btn btn-light signin"> <img src="assets/google.png" style="width: 25px;">&nbsp;&nbsp;<b>Sign in with Google</b></div>
+        </div>
+    
+        <div class="card-body" style="flex: 0; padding-left: initial;">
+            <div class="btn btn-light signin"> <img src="assets/apple.png" style="width: 25px;" alt=""> &nbsp;&nbsp;<b>Sign in with Apple</b></div>
+        </div>
+    
+        <div>
+            <h5 class="horizontal">OR</h5>
+        </div>
+    
+        <div class="card-body" style="flex: 0; padding-left: initial;">
+            <!-- <div class="btn btn-primary signup"><i (click)="toAccount()" class="fa-brands fa-facebook-square">&nbsp;&nbsp;</i><b>Sign up with phone or email</b></div> -->
+            <button class="btn btn-primary" style="background-color: black;" (click)="toAccount()">Sign up with phone or email</button>
+        </div>
+
+        <p>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
+
+        <div style="padding-top:40px">
+        <p>Have an account Already? <a style="color: #1A8CD8" (click)="openLogin()" >Login</a></p>
+        </div>
+    </div>
+</section>
+
+    

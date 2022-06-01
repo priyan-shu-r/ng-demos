@@ -1,0 +1,54 @@
+
+*{
+    // border: 1px solid;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: white;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    background-color: white;
+}
+
+.nav-wrapper{
+    width: 90%;
+    max-width: 1800px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-img{
+    height: 100%;
+    margin-top: 5px;
+}
+
+.search-box{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2px;
+    text-align: center;
+}
+
+
+@media (max-width: 1100px){
+    .search-box{
+        display: none;
+    }
+}

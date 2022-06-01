@@ -1,0 +1,158 @@
+.wrapper{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .mat-drawer-inner-container{
+    overflow-y: hidden;
+  } 
+  
+  .example-container {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.5); 
+    }
+  
+    .example-sidenav-content {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: 	#4f5d73;
+    }
+  
+    .mat-list{
+      // border: 1px solid black; 
+      display: flex ; 
+      flex: 1;
+      align-items: center;
+      padding: 0.8445rem 1rem;
+    }
+  
+    .mat-list-colors{
+      // border: 1px solid black; 
+      display: flex ; 
+      flex: 1;
+      align-items: center;
+      padding: 0.8445rem 1rem;
+      position: relative;
+      bottom: 25px;
+    }
+  
+    .mat-list-typography{
+      // border: 1px solid black; 
+      display: flex ; 
+      flex: 1;
+      align-items: center;
+      padding: 0.8445rem 1rem;
+      position: relative;
+      bottom: 45px;
+    }
+  
+    .base{
+      // border: 1px solid black; 
+      display: flex ; 
+      flex: 1;
+      align-items: center;
+      padding: 0.8445rem 1rem;
+      position: relative;
+      bottom: 85px;
+    }
+  
+    .buttons{
+      position: relative;
+      bottom: 30px;
+      left: 5px;
+    }
+  
+    .forms{
+      position: relative;
+      bottom: 30px;
+      left: 5px;
+    }
+  
+    .parent-form{
+      position:relative; 
+      bottom: 30px;
+    }
+  
+    .icons{
+      position: relative;
+      bottom: 30px;
+      left: 5px;
+    }
+  
+    .parent-icons{
+      position:relative; 
+      bottom: 30px;
+    }
+  
+    .charts{
+      position: relative;
+      bottom: 130px;
+      }
+    
+    .accordian{
+      position: relative;
+      bottom: 130px;
+      left: 50px;
+    }
+  
+    .buttonIcon{
+      position: relative;
+      bottom: 60px;
+      left: 10px;
+    }
+  
+    .widget{
+      position: relative;
+      bottom: 150px;
+    }
+  
+    .extras{
+      position: relative; 
+      bottom:150px
+    }
+  
+    .parent-pages{
+      position: relative;
+      bottom: 50px;
+    }
+  
+    .parent-docs{
+      position: relative;
+      bottom: 170px;
+    }
+  
+    .parent-core{
+      position: relative;
+      bottom: 180px;
+    }
+    
+    
+    .example-sidenav{
+        background-color:#4f5d73;
+    }
+  
+    .coreImage{
+      display: flex ; flex: 1;
+      align-items: center;
+      padding: 0.3445rem 5rem;
+    }
+    
+    .example-sidenav {
+      padding: 20px;
+    }
+  
+    .dashboard{
+      font-size: 20px;
+    }
+  
+    .badge{
+      font-size: initial;
+    }
+  
+    .theme{
+      margin-left: -20px;
+      font-size: 15px;
+    }

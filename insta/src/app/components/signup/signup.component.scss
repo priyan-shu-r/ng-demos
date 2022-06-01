@@ -1,0 +1,56 @@
+.card{
+    width: 25rem; 
+    height: 40rem;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.instaImg{
+    margin-left: 90px;
+}
+
+.parent{
+  // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+h5 {
+    display: flex;
+    flex-direction: row;
+  }
+  h5:before, h5:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+  }
+  h5:before {
+    margin-right: 10px
+  }
+  h5:after {
+    margin-left: 10px
+  }
+
+  .horizontal{
+      color: gray;
+  }
+
+  .child{
+      display: flex;
+      justify-content: center;
+  }
+
+  .card2{
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    height: 6rem; 
+    text-align: center; 
+    padding-top: 30px;
+  }
+
+ 
+
+  

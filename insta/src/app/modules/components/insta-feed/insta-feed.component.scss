@@ -1,0 +1,269 @@
+.main{
+    // border: 1px solid;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    // background-color: white;
+  }
+
+  .stories{
+      display: flex;
+      white-space: nowrap;
+  }
+  
+  .scroolLeft{
+    z-index: 10; 
+    position: sticky;
+    position: absolute;
+    bottom: 712px;
+  }
+
+  .scroolRight{
+    z-index: 10; 
+    position: sticky;
+    position: absolute;
+    left: 1000px;
+    bottom: 712px;
+  }
+
+  .wrapper{
+    //   border: 1px solid black;
+      width: 70%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-gap: 30px;
+  }
+  
+  .left-col{
+    //   border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .status-wrapper{
+    //   border: 1px solid blue;
+      width: 100%;
+      height: 120px;
+      background-color: #fff;
+      border: 1px solid #dfdfdf;
+      border-radius: 2px;
+      padding: 10px;
+      padding-right: 0;
+      padding-top: 32px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    //   overflow-x: auto;
+  }
+  
+  .status-wrapper::-webkit-scrollbar{
+      display: none;
+  }
+  
+  .status-card{
+    //   border: 1px solid;
+      flex: 0 0 auto;
+      width: 80px;
+      max-width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 15px;
+  }
+  
+  .profile{
+      width: 90%;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 3px;
+      background: linear-gradient(45deg, rgb(255,230,0), rgb(255,0,120) 80%);
+  }
+  
+  .profile img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fff;
+  }
+  
+  .username{
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      font-size: 12px;
+    //   margin-top: 5px;
+    padding-top: 6px;
+      color: rgb(0, 0, 0, 0.5);
+  }
+  
+  .post{
+      width: 100%;
+      height: auto;
+      background: #fff;
+      border: 1px solid #dfdfdf;
+      margin-top: 48px;
+  }
+  
+  .info{
+      width: 100%;
+      height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+  }
+  
+  .info .username{
+      width: auto;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+      margin-left: 18px;
+  }
+
+  .reaction-wrapper{
+    border: 1px solid #dfdfdf;
+  }
+
+  .reaction-wrapper i{
+      padding: 10px;
+} 
+
+ .save i {
+   float: right;
+   display: flex;
+   justify-content:center ;
+}
+  .info .user{
+      display: flex;
+      align-items: center;
+  }
+  
+  .info .profile{
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      background: none;
+  }
+  
+  .info .profile img {
+      border: none;
+  }
+  
+  .post-image{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+  }
+  
+  .post-content{
+      width: 100%;
+      padding: 20px;
+  }
+  
+  .likes{
+      font-weight: bold;
+  }
+  
+  .description{
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 20px;
+  }
+  
+  .description span{
+      font-weight: bold;
+      margin-right: 10px;
+  }
+  
+  .post-time{
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 12px;
+  }
+  
+  //right column
+  
+  .right-col{
+      padding: 20px;
+  }
+  
+  .profile-card{
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+  }
+  
+  .profile-card .profile.pic{
+      flex: 0 0 auto;
+      padding: 0;
+      background: none;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+  }
+  
+  .profile-card .username{
+      margin-left: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #000;
+  }
+  
+  .sub-text{
+      margin-top: 5px;
+      margin-left: 12px;
+      font-size: 12px;
+  }
+  
+  .action-btn{
+      width: 70px;
+      height: 100px;
+      background:none;
+      border: none;
+      outline: none;
+      opacity: 1;
+      font-weight: 700;
+      font-size: 15px;
+      color: blue;
+      margin-left: 50px;
+  }
+  
+  .suggetions{
+      font-size: 14px;
+      color: black;
+      font-weight: 700;
+      margin: 20px 0;
+  }
+  
+  @media (max-width: 1100px){
+      .right-col{
+          display: none;
+      }
+      .nav-wrapper,.wrapper{
+          width: 98%;
+      }
+      .wrapper{
+          display: block;
+      }
+  }
+  
+  @media (max-width: 500px){
+      .nav-items .icon{
+          margin: 0 5px;
+      }
+      .post-image{
+          height: 300px;
+      }
+  }
+
+
+
+
+

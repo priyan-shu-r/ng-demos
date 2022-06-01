@@ -1,0 +1,41 @@
+
+<!-- Side Navbar -->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" style="width:15%;">
+      <img src="assets/coreImages.png" class="coreImage" alt="">
+      <div>
+        <mat-list role="list" class="mat-list">
+            <mat-icon class="speed" [ngStyle]="{'color':'white'}">speedometer</mat-icon>
+            <mat-list-item role="listitem" [ngStyle]="{'color':'white'}" class="dashboard">Dashboard</mat-list-item>
+            <span class="badge" class="badge bg-primary">New</span>
+        </mat-list>
+    
+        <mat-list role="list" class="mat-list">
+            <mat-list-item role="listitem" class="theme" [ngStyle]="{'color':'white'}"><b>THEME</b></mat-list-item>
+        </mat-list>
+
+        <mat-list role="list" class="mat-list1">
+        <mat-icon [ngStyle]="{'color':'white'}">invert_colors</mat-icon>
+        <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}" >Colors</mat-list-item>
+        </mat-list>
+
+        <mat-list role="list" class="mat-list2">
+            <mat-icon [ngStyle]="{'color':'white'}">border_color</mat-icon>
+            <mat-list-item role="listitem" class="colors" [ngStyle]="{'color':'white'}" >Typography</mat-list-item>
+        </mat-list>
+        </div>
+</mat-drawer>
+
+
+<!-- Top Navbar -->
+    <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+            <mat-button-toggle value="left" aria-label="Text align left">
+              <mat-icon (click)="drawer.toggle()">format_align_justify</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>  
+    </div>
+</mat-drawer-container>
+
+
+

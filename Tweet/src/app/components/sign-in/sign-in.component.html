@@ -1,0 +1,62 @@
+<section *ngIf="openDialog">
+<div class="parent-container">
+    <img src="assets/close.png" (click)="destroy()" mat-dialog-close class="close" alt="">
+    <img src="assets/bird.png" class="bird" alt="">
+</div>
+
+<div class="twitterSignin">
+    <h2 style="margin-left: 27%; font-size: 30px; padding-top: 30px;">Sign in to Twitter</h2>
+
+    <div class="card-body" style="flex: 0; padding-left: initial; ">
+        <div class="btn btn-light signin"> <img src="assets/google.png" style="width: 25px;">&nbsp;&nbsp;<b>Sign in with Google</b></div>
+    </div>
+
+    <div class="card-body" style="flex: 0; padding-left: initial;">
+        <div class="btn btn-light signin"> <img src="assets/apple.png" style="width: 25px;" alt=""> &nbsp;&nbsp;<b>Sign in with Apple</b></div>
+    </div>
+
+    <div>
+        <h5 class="horizontal">OR</h5>
+    </div>
+   
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone, Email or Username</mat-label>
+        <input type="email" matInput>
+    </mat-form-field>
+
+    <div class="card-body" style="flex: 0; padding-left: initial;">
+        <div class="btn btn-primary signup"><i class="fa-brands fa-facebook-square">&nbsp;&nbsp;</i><b>Next</b></div>
+    </div>
+
+    <div class="card-body" style="flex: 0; padding-left: initial;">
+        <div class="btn btn-primary forgot"><i class="fa-brands fa-facebook-square">&nbsp;&nbsp;</i><b>Forgot Password</b></div>
+    </div>
+    <div style="padding-top:40px">
+    <p>Don't have an Account? <a href="" (click)="goSignin()" style="color: #1A8CD8" >Signup</a></p>
+    <!-- <button  >CLose</button> -->
+    </div>
+</div>
+</section>
+
+<!-- <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" >ghfghfgh</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
