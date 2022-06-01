@@ -1,0 +1,25 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "A rest API with nodejs and mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "priyanshu",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-myconnection": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
+    "sequelize": "^6.20.0",
+    "sequelize-cli": "^6.4.1"
+  }
+}
